@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="utf-8"><title>Cocina 3D</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cocina 3D</title>
 <style>
 body{margin:0;overflow:hidden;background:#1a1a2e;font-family:sans-serif}
 #info{position:absolute;top:10px;left:10px;color:#ccc;background:rgba(0,0,0,.6);
@@ -39,7 +42,7 @@ camera.position.set(...CAM_POS);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(innerWidth, innerHeight);
-renderer.setPixelRatio(devicePixelRatio);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 0.8;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -50,6 +53,10 @@ controls.target.set(...CAM_TARGET);
 controls.enableDamping = true;
 controls.dampingFactor = 0.08;
 controls.minDistance = 0.05;
+// Explicitly enable touch controls (enabled by default, but making it explicit)
+controls.enableRotate = true;  // One-finger touch: rotate
+controls.enableZoom = true;    // Two-finger pinch: zoom
+controls.enablePan = true;     // Two-finger drag: pan
 controls.update();
 
 // ---- RectAreaLight support ----
@@ -602,21 +609,44 @@ const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const labelDiv = document.getElementById('label');
 
-window.addEventListener('mousemove', (ev) => {
-  mouse.x = (ev.clientX / innerWidth) * 2 - 1;
-  mouse.y = -(ev.clientY / innerHeight) * 2 + 1;
+// Helper function to update label based on screen position
+function updateLabel(clientX, clientY) {
+  mouse.x = (clientX / innerWidth) * 2 - 1;
+  mouse.y = -(clientY / innerHeight) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
   const hits = raycaster.intersectObjects(meshes);
   if (hits.length > 0) {
     const obj = hits[0].object;
     labelDiv.style.display = 'block';
-    labelDiv.style.left = ev.clientX + 12 + 'px';
-    labelDiv.style.top = ev.clientY + 12 + 'px';
+    labelDiv.style.left = clientX + 12 + 'px';
+    labelDiv.style.top = clientY + 12 + 'px';
     const p = obj.geometry.parameters;
     labelDiv.textContent = `${obj.userData.name} (${(p.width*100).toFixed(0)}x${(p.height*100).toFixed(0)}x${(p.depth*100).toFixed(0)} cm)`;
   } else {
     labelDiv.style.display = 'none';
   }
+}
+
+// Mouse events for desktop
+window.addEventListener('mousemove', (ev) => {
+  updateLabel(ev.clientX, ev.clientY);
+});
+
+// Touch events for mobile
+window.addEventListener('touchstart', (ev) => {
+  if (ev.touches.length === 1) {
+    updateLabel(ev.touches[0].clientX, ev.touches[0].clientY);
+  }
+});
+
+window.addEventListener('touchmove', (ev) => {
+  if (ev.touches.length === 1) {
+    updateLabel(ev.touches[0].clientX, ev.touches[0].clientY);
+  }
+});
+
+window.addEventListener('touchend', () => {
+  labelDiv.style.display = 'none';
 });
 
 // ---- Resize ----
