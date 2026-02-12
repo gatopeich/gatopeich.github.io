@@ -3664,118 +3664,6 @@
     {
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.55,
-          0.45,
-          0.35,
-          0.6
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "door"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.6,
-          0.5,
-          0.38,
-          0.75
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "furn"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.72,
-          0.62,
-          0.47,
-          0.85
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "upper"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.7,
-          0.85,
-          0.95,
-          0.25
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "window"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.85,
-          0.85,
-          0.85,
-          0.8
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "appl"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
           0.47,
           0.56,
           0.49,
@@ -3795,51 +3683,7 @@
       ],
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "name": "base"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.93,
-          0.91,
-          0.88,
-          0.12
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 4,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "wall"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1.0,
-          0.95,
-          0.7,
-          0.7
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "light"
+      "name": "column"
     },
     {
       "pbrMetallicRoughness": {
@@ -3868,6 +3712,118 @@
     {
       "pbrMetallicRoughness": {
         "baseColorFactor": [
+          0.72,
+          0.62,
+          0.47,
+          0.85
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "upper"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6,
+          0.5,
+          0.38,
+          0.75
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "furn"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.47,
+          0.56,
+          0.49,
+          0.85
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "base"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.85,
+          0.85,
+          0.85,
+          0.8
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "appl"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.95,
+          0.7,
+          0.7
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "light"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
           0.7,
           0.72,
           0.74,
@@ -3884,6 +3840,74 @@
       "alphaMode": "BLEND",
       "doubleSided": true,
       "name": "sink"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7,
+          0.85,
+          0.95,
+          0.25
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "window"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.55,
+          0.45,
+          0.35,
+          0.6
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "door"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.93,
+          0.91,
+          0.88,
+          0.12
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 4,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "wall"
     },
     {
       "pbrMetallicRoughness": {
@@ -3908,30 +3932,6 @@
       "alphaMode": "BLEND",
       "doubleSided": true,
       "name": "tile"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.47,
-          0.56,
-          0.49,
-          0.85
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 0,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "column"
     }
   ],
   "meshes": [
@@ -3945,7 +3945,7 @@
           },
           "indices": 3,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Pared Norte izq"
@@ -3960,7 +3960,7 @@
           },
           "indices": 7,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Pared Norte der"
@@ -3975,7 +3975,7 @@
           },
           "indices": 11,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Pared Sur"
@@ -3990,7 +3990,7 @@
           },
           "indices": 15,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Suelo"
@@ -4005,7 +4005,7 @@
           },
           "indices": 19,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Pared Oeste"
@@ -4020,7 +4020,7 @@
           },
           "indices": 23,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Pared Este"
@@ -4035,7 +4035,7 @@
           },
           "indices": 27,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Lavadora"
@@ -4050,7 +4050,7 @@
           },
           "indices": 31,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Lavavajillas"
@@ -4065,7 +4065,7 @@
           },
           "indices": 35,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Limpieza"
@@ -4080,7 +4080,7 @@
           },
           "indices": 39,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Cajones fregadero"
@@ -4095,7 +4095,7 @@
           },
           "indices": 43,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Cajones"
@@ -4110,7 +4110,7 @@
           },
           "indices": 47,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Cajones"
@@ -4125,7 +4125,7 @@
           },
           "indices": 51,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Inducci\u00f3n/Horno"
@@ -4140,7 +4140,7 @@
           },
           "indices": 55,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Despensa"
@@ -4155,7 +4155,7 @@
           },
           "indices": 59,
           "mode": 4,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Escobero"
@@ -4170,7 +4170,7 @@
           },
           "indices": 63,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Frigor\u00edfico"
@@ -4185,7 +4185,7 @@
           },
           "indices": 67,
           "mode": 4,
-          "material": 8
+          "material": 1
         }
       ],
       "name": "Encimera izq"
@@ -4200,7 +4200,7 @@
           },
           "indices": 71,
           "mode": 4,
-          "material": 8
+          "material": 1
         }
       ],
       "name": "Encimera der"
@@ -4215,7 +4215,7 @@
           },
           "indices": 75,
           "mode": 4,
-          "material": 8
+          "material": 1
         }
       ],
       "name": "Copete izq"
@@ -4230,7 +4230,7 @@
           },
           "indices": 79,
           "mode": 4,
-          "material": 8
+          "material": 1
         }
       ],
       "name": "Copete der"
@@ -4290,7 +4290,7 @@
           },
           "indices": 95,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Placa inducci\u00f3n"
@@ -4305,7 +4305,7 @@
           },
           "indices": 99,
           "mode": 4,
-          "material": 3
+          "material": 8
         }
       ],
       "name": "Ventana grande"
@@ -4320,7 +4320,7 @@
           },
           "indices": 103,
           "mode": 4,
-          "material": 3
+          "material": 8
         }
       ],
       "name": "Ventana peque\u00f1a"
@@ -4335,7 +4335,7 @@
           },
           "indices": 107,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Persiana grande"
@@ -4350,7 +4350,7 @@
           },
           "indices": 111,
           "mode": 4,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Persiana peque\u00f1a"
@@ -4365,7 +4365,7 @@
           },
           "indices": 115,
           "mode": 4,
-          "material": 9
+          "material": 7
         }
       ],
       "name": "Fregadero"
@@ -4380,7 +4380,7 @@
           },
           "indices": 119,
           "mode": 4,
-          "material": 0
+          "material": 9
         }
       ],
       "name": "Puerta"
@@ -4395,7 +4395,7 @@
           },
           "indices": 123,
           "mode": 4,
-          "material": 10
+          "material": 11
         }
       ],
       "name": "Columna azulejo"
@@ -4410,7 +4410,7 @@
           },
           "indices": 127,
           "mode": 4,
-          "material": 11
+          "material": 0
         }
       ],
       "name": "Microondas base"
@@ -4425,7 +4425,7 @@
           },
           "indices": 131,
           "mode": 4,
-          "material": 4
+          "material": 5
         }
       ],
       "name": "Microondas"
@@ -4455,7 +4455,7 @@
           },
           "indices": 139,
           "mode": 4,
-          "material": 11
+          "material": 0
         }
       ],
       "name": "Despensa Sur 1"
@@ -4485,7 +4485,7 @@
           },
           "indices": 147,
           "mode": 4,
-          "material": 11
+          "material": 0
         }
       ],
       "name": "Despensa Sur 2"
@@ -4500,7 +4500,7 @@
           },
           "indices": 151,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Mesa comedor"
@@ -4515,7 +4515,7 @@
           },
           "indices": 155,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 1"
@@ -4530,7 +4530,7 @@
           },
           "indices": 159,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 2"
@@ -4545,7 +4545,7 @@
           },
           "indices": 163,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 3"
@@ -4560,7 +4560,7 @@
           },
           "indices": 167,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 4"
@@ -4575,7 +4575,7 @@
           },
           "indices": 171,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 5"
@@ -4590,7 +4590,7 @@
           },
           "indices": 175,
           "mode": 4,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "Silla 6"
@@ -4665,7 +4665,7 @@
           },
           "indices": 195,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "LED Norte"
@@ -4680,7 +4680,7 @@
           },
           "indices": 199,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "LED Sur"
@@ -4695,7 +4695,7 @@
           },
           "indices": 203,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "Foco 1"
@@ -4710,7 +4710,7 @@
           },
           "indices": 207,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "Foco 2"
@@ -4725,7 +4725,7 @@
           },
           "indices": 211,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "Foco 3"
@@ -4740,7 +4740,7 @@
           },
           "indices": 215,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "Foco 4"
@@ -4755,7 +4755,7 @@
           },
           "indices": 219,
           "mode": 4,
-          "material": 7
+          "material": 6
         }
       ],
       "name": "Foco 5"
