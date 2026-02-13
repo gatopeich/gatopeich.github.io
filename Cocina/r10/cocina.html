@@ -218,7 +218,7 @@ function getWoodMats6(tk, w, h, d) {
 const matSink    = new THREE.MeshStandardMaterial({ color: 0xf5f5f5, roughness: 0.4, metalness: 0.0 });
 const matCooktop = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.1, metalness: 0.3 });
 const matWhite   = new THREE.MeshStandardMaterial({ color: 0xf0f0f0, roughness: 0.3, metalness: 0.05 });
-const matCeiling = new THREE.MeshStandardMaterial({ color: 0xfafafa, roughness: 0.8, metalness: 0.0, transparent: true, opacity: 0.85, side: THREE.DoubleSide });
+const matCeiling = new THREE.MeshStandardMaterial({ color: 0xfafafa, roughness: 0.8, metalness: 0.0, transparent: true, opacity: 0.85, side: THREE.FrontSide });
 
 // Oven/microwave: crop product photo borders
 function makeOvenMat() {
@@ -578,6 +578,15 @@ ELEMENTS.forEach(el => {
       ? new THREE.MeshStandardMaterial({ visible: false })
       : m);
   }
+  // Oven box: sides should be green Agave (from adjacent units)
+  if (/Inducción\/Horno/.test(el.name)) {
+    const agaveSide = getTexMat('agave', el.d, eh);
+    mat = getWoodMats6('agave', el.w, eh, el.d);
+    // Remove front face
+    const isNorte = el.z < 1.5;
+    const frontIdx = isNorte ? 4 : 5;
+    mat[frontIdx] = new THREE.MeshStandardMaterial({ visible: false });
+  }
   const m = addBox(el.name, el.type, el.x, ey, el.z, el.w, eh, el.d, mat);
   meshes.push(m);
 
@@ -607,6 +616,63 @@ addBox('Perfil col izq', 'appl', colL - AS, 0, colZ - AS, AS, colH, AS, matAlum,
 addBox('Perfil col der', 'appl', colR,      0, colZ - AS, AS, colH, AS, matAlum, false);
 // North wall step at x=3.04 where left section protrudes 10cm (z=0..0.10)
 addBox('Perfil step',    'appl', 3.04 - AS, 0, 0,         AS, colH, 0.10, matAlum, false);
+
+// ---- Fridge-freezer interior (Frigorífico) ----
+// White-bluish interior with transparent shelves on top and freezer drawers below
+{
+  const fridgeEl = ELEMENTS.find(e => /Frigor/.test(e.name));
+  if (fridgeEl) {
+    const fx = fridgeEl.x, fz = fridgeEl.z, fw = fridgeEl.w, fd = fridgeEl.d;
+    const fy = ZOCALO_H;  // above zócalo
+    const fh = fridgeEl.h - ZOCALO_H;
+    const wallT = 0.015;  // 1.5cm interior walls
+    const matFridgeInt = new THREE.MeshStandardMaterial({
+      color: 0xe8f0fa, roughness: 0.4, metalness: 0.0, side: THREE.FrontSide,
+    });
+    const matFridgeShelf = new THREE.MeshStandardMaterial({
+      color: 0xddeeff, transparent: true, opacity: 0.5,
+      roughness: 0.1, metalness: 0.0, side: THREE.DoubleSide,
+    });
+    const matFreezerDoor = new THREE.MeshStandardMaterial({
+      color: 0xf0f5ff, roughness: 0.3, metalness: 0.05,
+    });
+    // Interior walls (back, left, right, top, bottom)
+    addBox('Frigorífico fondo', 'appl', fx + wallT, fy + wallT, fz, fw - 2*wallT, fh - 2*wallT, wallT, matFridgeInt, false);
+    addBox('Frigorífico izq', 'appl', fx, fy, fz, wallT, fh, fd, matFridgeInt, false);
+    addBox('Frigorífico der', 'appl', fx + fw - wallT, fy, fz, wallT, fh, fd, matFridgeInt, false);
+    addBox('Frigorífico techo', 'appl', fx, fy + fh - wallT, fz, fw, wallT, fd, matFridgeInt, false);
+    addBox('Frigorífico suelo', 'appl', fx, fy, fz, fw, wallT, fd, matFridgeInt, false);
+    // Freezer section: bottom 1/3 of interior height
+    const freezerH = fh * 0.33;
+    const fridgeH = fh - freezerH - wallT;
+    // Divider between fridge and freezer
+    addBox('Frigorífico separador', 'appl', fx + wallT, fy + freezerH, fz + wallT, fw - 2*wallT, wallT, fd - 2*wallT, matFridgeInt, false);
+    // 3 transparent shelves in fridge section (evenly spaced)
+    const shelfY0 = fy + freezerH + wallT;
+    const shelfSpacing = fridgeH / 4;
+    for (let si = 1; si <= 3; si++) {
+      addBox(`Frigorífico estante ${si}`, 'appl',
+        fx + wallT, shelfY0 + si * shelfSpacing, fz + wallT,
+        fw - 2*wallT, 0.005, fd - 2*wallT, matFridgeShelf, false);
+    }
+    // 2 freezer drawers in bottom section
+    const freezerDrawerH = (freezerH - 3 * wallT) / 2;
+    for (let fi = 0; fi < 2; fi++) {
+      const fdY = fy + wallT + fi * (freezerDrawerH + wallT);
+      const fdW = fw - 4 * wallT;
+      const fdD = fd - 3 * wallT;
+      const frontMesh = addBox(`Cajón congelador ${fi+1}`, 'appl',
+        fx + 2*wallT, fdY, fz + fd - wallT - 0.002,
+        fdW, freezerDrawerH, 0.002, matFreezerDoor, false);
+      meshes.push(frontMesh);
+      interactives.push({
+        mesh: frontMesh, type: 'drawer',
+        closedZ: frontMesh.position.z, dir: 1, slideMax: fd * 0.5,
+        state: 0, target: 0,
+      });
+    }
+  }
+}
 
 // ---- Telescopic hood integrated in Campana/Especias (x=3.57..4.17) ----
 // Wood cabinet stops 3cm above bottom; lower 3cm is the hood:
@@ -664,33 +730,33 @@ let campanaVisor = null;
   ctx.fillStyle = '#1a1000';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'top';
-  ctx.font = 'bold 42px Georgia, serif';
-  ctx.fillText('Superficies que dialogan', 510, 28);
+  ctx.font = 'bold 50px Georgia, serif';
+  ctx.fillText('Superficies que dialogan', 510, 24);
   // Decorative line under title
   ctx.strokeStyle = '#996515'; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.moveTo(180, 78); ctx.lineTo(840, 78); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(140, 82); ctx.lineTo(880, 82); ctx.stroke();
   // Text
   ctx.fillStyle = '#1a1000';
   ctx.textAlign = 'left';
   const lines = [
-    { t: '\u00ABHay 3 universos de diferencia en calidad', s: 35, i: true },
-    { t: 'formal entre una y otra.', s: 35, i: true },
+    { t: '\u00ABHay 3 universos de diferencia en calidad', s: 38, i: true },
+    { t: 'formal entre una y otra.', s: 38, i: true },
     { t: '', s: 8 },
-    { t: 'Una es un volumen vaciado, con unas', s: 33, i: true },
-    { t: 'rectas definidas (...) tiene 2 superficies', s: 33, i: true },
-    { t: 'horizontales que \u2018dialogan\u2019', s: 33, i: true },
-    { t: '(encimera y vuelo) (...)', s: 33, i: true },
+    { t: 'Una es un volumen vaciado, con unas', s: 36, i: true },
+    { t: 'rectas definidas (...) tiene 2 superficies', s: 36, i: true },
+    { t: 'horizontales que \u2018dialogan\u2019', s: 36, i: true },
+    { t: '(encimera y vuelo) (...)', s: 36, i: true },
     { t: '', s: 8 },
-    { t: 'Por la misma raz\u00F3n que no quebramos la', s: 33, i: true },
-    { t: 'encimera cuando llegamos al tac\u00F3n de la', s: 33, i: true },
-    { t: 'cocina \u2014 es tela de feo quebrar este', s: 33, i: true },
-    { t: 'elemento cuando llegamos a un cambio', s: 33, i: true },
-    { t: 'de profundidad.', s: 33, i: true },
+    { t: 'Por la misma raz\u00F3n que no quebramos la', s: 36, i: true },
+    { t: 'encimera cuando llegamos al tac\u00F3n de la', s: 36, i: true },
+    { t: 'cocina \u2014 es tela de feo quebrar este', s: 36, i: true },
+    { t: 'elemento cuando llegamos a un cambio', s: 36, i: true },
+    { t: 'de profundidad.', s: 36, i: true },
     { t: '', s: 8 },
-    { t: 'Pero como dec\u00EDa un aparejador de Menorca:', s: 30, i: true },
-    { t: '\u00AByo no voy a vivir ah\u00ED.\u00BB\u2019', s: 30, i: true },
+    { t: 'Pero como dec\u00EDa un aparejador de Menorca:', s: 33, i: true },
+    { t: '\u00AByo no voy a vivir ah\u00ED.\u00BB\u2019', s: 33, i: true },
   ];
-  let ty = 90;
+  let ty = 100;
   for (const ln of lines) {
     if (ln.t) {
       ctx.font = (ln.i ? 'italic ' : '') + ln.s + 'px Georgia, serif';
@@ -935,7 +1001,7 @@ function taperGripBody(geo, axis, edgeSign, zDir) {
 // Which elements are interactive
 function getInteraction(name, type) {
   if (/Cajones/.test(name)) return 'drawer';
-  if (/Inducción\/Horno/.test(name)) return 'drawer';  // oven opens like a drawer
+  if (/Inducción\/Horno/.test(name)) return 'oven_door';  // oven door opens downward
   if (/Campana\/Especias/.test(name)) return 'double_door';
   if (NON_INTERACTIVE.test(name)) return null;
   if (['base', 'column', 'appl', 'upper'].includes(type)) return 'door';
@@ -951,7 +1017,7 @@ function getPanelMat(el, pw, ph) {
   return matWhite;
 }
 
-// Darker grip-lip material for the 4cm inner strip (makes uñero more visible)
+// Grip-lip material for the 4cm inner strip — keeps base texture/color with less reflectivity
 const gripLipCache = new Map();
 function getGripLipMat(baseMat) {
   if (gripLipCache.has(baseMat)) return gripLipCache.get(baseMat);
@@ -960,8 +1026,7 @@ function getGripLipMat(baseMat) {
     m.map = m.map.clone();
     m.map.needsUpdate = true;
   }
-  m.color = new THREE.Color(0x444444);
-  m.roughness = 0.9;
+  m.roughness = 0.7;
   m.metalness = 0.0;
   gripLipCache.set(baseMat, m);
   return m;
@@ -1047,8 +1112,27 @@ ELEMENTS.forEach(el => {
     return;
   }
 
-  if (interaction === 'drawer') {
-    // Cajones: 3-drawer unit; Oven: single drawer
+  if (interaction === 'oven_door') {
+    // Oven door: opens downward, hinged at bottom
+    const pw = el.w - 2 * PANEL_SIDE_GAP;
+    const pMat = getPanelMat(el, pw, panelH);
+    const pivot = new THREE.Group();
+    // Pivot at bottom edge of panel, on front face
+    pivot.position.set(el.x + el.w / 2, panelY, pzFront);
+    const g = new THREE.BoxGeometry(pw, panelH, PANEL_T);
+    g.translate(0, panelH / 2, -zDir * PANEL_T / 2);
+    const m = new THREE.Mesh(g, pMat);
+    m.userData = { name: el.name, type: el.type };
+    pivot.add(m);
+    scene.add(pivot);
+    meshes.push(m);
+    interactives.push({
+      mesh: m, pivot, type: 'oven_door',
+      openAngle: zDir * Math.PI / 2,  // opens downward 90°
+      state: 0, target: 0,
+    });
+  } else if (interaction === 'drawer') {
+    // Cajones: 3-drawer unit with finger pulls on upper edge
     const isCajones = /Cajones/.test(el.name);
     const N_DRAWERS = isCajones ? 3 : 1;
     const pw = el.w - 2 * PANEL_SIDE_GAP;
@@ -1060,16 +1144,29 @@ ELEMENTS.forEach(el => {
       : el.z + PANEL_T / 2;
 
     for (let di = 0; di < N_DRAWERS; di++) {
-      const dy = panelY + di * (drawerH + drawerGap) + drawerH / 2;
+      const dy = panelY + di * (drawerH + drawerGap);
       const pMat = getPanelMat(el, pw, drawerH);
-      const g = new THREE.BoxGeometry(pw, drawerH, PANEL_T);
-      const m = new THREE.Mesh(g, pMat);
-      m.position.set(el.x + el.w / 2, dy, fz);
-      m.userData = { name: N_DRAWERS > 1 ? `${el.name} (cajón ${di+1})` : el.name, type: el.type };
-      scene.add(m);
-      meshes.push(m);
+      // Two-part: body + grip lip on upper edge (same as door top grip)
+      const bodyH = drawerH - GRIP_OUTER;
+      const gBody = new THREE.BoxGeometry(pw, bodyH, PANEL_T);
+      const gLip  = new THREE.BoxGeometry(pw, GRIP_INNER, GRIP_THIN);
+      const bodyZc = -zDir * PANEL_T / 2;
+      const lipZc  = -zDir * (PANEL_T - GRIP_THIN / 2);
+      taperGripBody(gBody, 1, 1, zDir);  // taper at top edge
+      gBody.translate(0, -GRIP_OUTER / 2, bodyZc);
+      gLip.translate(0, (drawerH - GRIP_INNER) / 2, lipZc);
+      const drawerGroup = new THREE.Group();
+      drawerGroup.position.set(el.x + el.w / 2, dy + drawerH / 2, fz);
+      const mBody = new THREE.Mesh(gBody, pMat);
+      const mLip  = new THREE.Mesh(gLip, getGripLipMat(pMat));
+      const dName = N_DRAWERS > 1 ? `${el.name} (cajón ${di+1})` : el.name;
+      mBody.userData = { name: dName, type: el.type };
+      mLip.userData  = { name: dName + ' grip', type: el.type };
+      drawerGroup.add(mBody); drawerGroup.add(mLip);
+      scene.add(drawerGroup);
+      meshes.push(mBody); meshes.push(mLip);
       interactives.push({
-        mesh: m, type: 'drawer',
+        mesh: mBody, group: drawerGroup, type: 'drawer',
         closedZ: fz, dir: zDir, slideMax: el.d * 0.6,
         state: 0, target: 0,
       });
@@ -1183,18 +1280,16 @@ renderer.domElement.addEventListener('pointerup', (ev) => {
   );
   rc.setFromCamera(pt, camera);
 
-  // Check interactive panels first (doors, drawers, campana)
-  const panelHits = rc.intersectObjects(interactives.map(p => p.mesh));
-  if (panelHits.length) {
-    const panel = interactives.find(p => p.mesh === panelHits[0].object);
-    if (panel) { panel.target = panel.target < 0.5 ? 1 : 0; return; }
-  }
-
-  // Check all meshes for ceiling/wall/window/plaque clicks
-  const allHits = rc.intersectObjects(meshes);
-  if (allHits.length) {
-    const obj = allHits[0].object;
+  // Raycast against the whole scene (recursive) to find all intersections
+  const allHits = rc.intersectObjects(scene.children, true);
+  for (const hit of allHits) {
+    const obj = hit.object;
     const ud = obj.userData || {};
+
+    // Interactive panels (doors, drawers, campana)
+    const panel = interactives.find(p => p.mesh === obj);
+    if (panel) { panel.target = panel.target < 0.5 ? 1 : 0; return; }
+
     // Click on ceiling → toggle ceiling LEDs
     if (ud.type === 'ceiling' || ud.name === 'Techo') {
       ceilingLedState = cycleLed(ceilingLedState);
@@ -1307,8 +1402,12 @@ const hideNorte = [], hideSur = [];
     if (Math.abs(p.state - p.target) < 0.001) p.state = p.target;
     if (p.type === 'door') {
       p.pivot.rotation.y = p.openAngle * p.state;
+    } else if (p.type === 'oven_door') {
+      p.pivot.rotation.x = p.openAngle * p.state;
     } else if (p.type === 'drawer') {
-      p.mesh.position.z = p.closedZ + p.slideMax * p.state * p.dir;
+      const z = p.closedZ + p.slideMax * p.state * p.dir;
+      if (p.group) p.group.position.z = z;
+      else p.mesh.position.z = z;
     } else if (p.type === 'campana') {
       p.group.position.z = p.slideMax * p.state;
     }
