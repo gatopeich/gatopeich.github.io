@@ -524,6 +524,9 @@ const WALL_OUTSIDE = {
 };
 const wallTrack = [];
 
+// Which elements are interactive (const must be before first ELEMENTS.forEach to avoid TDZ)
+const NON_INTERACTIVE = /Cornisa|Nicho de techo|Placa|Copete|Encimera|Fregadero|LED|Foco|Persiana|Pared|Suelo|Mesa|Silla|Columna azulejo|Ventana|Campana|Techo|Estante|Repisa|Caldera Ariston/;
+
 // ---- Build all meshes ----
 ELEMENTS.forEach(el => {
   const isAgaveFront = /Lavadora|Lavavajillas|Frigor/.test(el.name);
@@ -930,7 +933,6 @@ function taperGripBody(geo, axis, edgeSign, zDir) {
 }
 
 // Which elements are interactive
-const NON_INTERACTIVE = /Cornisa|Nicho de techo|Placa|Copete|Encimera|Fregadero|LED|Foco|Persiana|Pared|Suelo|Mesa|Silla|Columna azulejo|Ventana|Campana|Techo|Estante|Repisa|Caldera Ariston/;
 function getInteraction(name, type) {
   if (/Cajones/.test(name)) return 'drawer';
   if (/Inducción\/Horno/.test(name)) return 'drawer';  // oven opens like a drawer
