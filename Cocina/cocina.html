@@ -39,6 +39,14 @@ const GRIP_THIN = 0.005;        // 5mm thin lip depth
 const ZOCALO_H = 0.10;          // 10cm plinth height
 const ZOCALO_RECESS = 0.03;     // 3cm recessed from cabinet front
 
+// ---- Mobile detection & performance settings ----
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  || (window.innerWidth <= 768);
+const isLowEndDevice = isMobile && (
+  /Android [1-6]\.|CPU (iPhone )?OS [5-9]_/i.test(navigator.userAgent) ||
+  (/Android/i.test(navigator.userAgent) && navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4)
+);
+
 // ---- Scene setup ----
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x1a1a2e);
@@ -46,9 +54,14 @@ scene.background = new THREE.Color(0x1a1a2e);
 const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.01, 100);
 camera.position.set(...CAM_POS);
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+// Optimize renderer for mobile: disable AA on low-end, cap pixel ratio
+const renderer = new THREE.WebGLRenderer({ 
+  antialias: !isLowEndDevice,
+  powerPreference: isMobile ? 'low-power' : 'high-performance',
+});
 renderer.setSize(innerWidth, innerHeight);
-renderer.setPixelRatio(devicePixelRatio);
+// Cap pixel ratio: 1.0 for low-end, 1.5 for mobile, full for desktop
+renderer.setPixelRatio(isLowEndDevice ? 1.0 : (isMobile ? Math.min(1.5, devicePixelRatio) : devicePixelRatio));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 0.8;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -61,16 +74,36 @@ controls.dampingFactor = 0.08;
 controls.minDistance = 0.05;
 controls.update();
 
+// ---- Performance indicator ----
+if (isMobile) {
+  const infoDiv = document.getElementById('info');
+  if (infoDiv) {
+    const perfMode = isLowEndDevice ? 'Modo optimizado (low-end)' : 'Modo optimizado (mobile)';
+    const details = isLowEndDevice 
+      ? 'pixelRatio=1.0, sin antialiasing, texturas reducidas'
+      : 'pixelRatio=1.5, texturas optimizadas';
+    infoDiv.innerHTML = `Cocina 3D &mdash; ${perfMode}<br><small style="opacity:0.7">${details}</small>`;
+  }
+}
+
 // ---- RectAreaLight support ----
 RectAreaLightUniformsLib.init();
 
-// ---- Texture loading ----
+// ---- Texture loading with mobile optimization ----
 const loader = new THREE.TextureLoader();
 const texBase = {};
 for (const [k, uri] of Object.entries(TEX_DATA)) {
   const t = loader.load(uri);
   t.wrapS = t.wrapT = THREE.RepeatWrapping;
   t.colorSpace = THREE.SRGBColorSpace;
+  // Use mipmaps and optimize filtering for mobile
+  if (isMobile) {
+    t.minFilter = THREE.LinearMipmapLinearFilter;
+    t.magFilter = THREE.LinearFilter;
+    t.anisotropy = isLowEndDevice ? 1 : 2; // Reduce anisotropy on low-end
+  } else {
+    t.anisotropy = Math.min(4, renderer.capabilities.getMaxAnisotropy());
+  }
   texBase[k] = t;
 }
 
@@ -129,7 +162,8 @@ function cloneTexH(key, fw, fh) {
 
 // ---- Grout lines: bake 3mm white grout into a tiled canvas texture ----
 function makeTiledTexWithGrout(baseTexKey, tileRealW, tileRealH, groutM, surfaceW, surfaceH, canvasScale) {
-  canvasScale = canvasScale || 200;
+  // Reduce canvas scale on mobile to save memory and CPU
+  canvasScale = canvasScale || (isMobile ? 100 : 200);
   const cw = Math.round(surfaceW * canvasScale);
   const ch = Math.round(surfaceH * canvasScale);
   const tw = Math.round(tileRealW * canvasScale);
@@ -138,7 +172,7 @@ function makeTiledTexWithGrout(baseTexKey, tileRealW, tileRealH, groutM, surface
 
   const cvs = document.createElement('canvas');
   cvs.width = cw; cvs.height = ch;
-  const ctx = cvs.getContext('2d');
+  const ctx = cvs.getContext('2d', { alpha: false }); // Disable alpha for performance
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, cw, ch);
 
@@ -249,12 +283,13 @@ const matVitrina = new THREE.MeshStandardMaterial({
 
 // Wall material: white tile 120x60cm in running-bond (brick) pattern, semi-transparent
 function makeWallMat(fw, fh) {
-  const scale = 400;
+  // Reduce wall texture scale on mobile
+  const scale = isMobile ? 200 : 400;
   const cw = Math.round(fw * scale), ch = Math.round(fh * scale);
   const tw = Math.round(1.20 * scale), th = Math.round(0.60 * scale);
   const cvs = document.createElement('canvas');
   cvs.width = cw; cvs.height = ch;
-  const ctx = cvs.getContext('2d');
+  const ctx = cvs.getContext('2d', { alpha: false });
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, cw, ch);
   const img = new Image();
@@ -329,7 +364,8 @@ function addBox(name, type, x, y, z, w, h, d, mat, edges = true) {
   m.position.set(x + w / 2, y + h / 2, z + d / 2);
   m.userData = { name, type };
   scene.add(m);
-  if (edges && type !== 'wall') {
+  // Disable edges on mobile for better performance
+  if (edges && type !== 'wall' && !isMobile) {
     const e = new THREE.EdgesGeometry(g);
     const l = new THREE.LineSegments(e, edgeMat);
     l.position.copy(m.position);
@@ -501,10 +537,12 @@ function buildInductionPlaque(el) {
   mesh.userData = { name: el.name, type: el.type };
   scene.add(mesh);
 
-  // Edges
-  const eg = new THREE.EdgesGeometry(geom);
-  const el2 = new THREE.LineSegments(eg, edgeMat);
-  scene.add(el2);
+  // Edges (skip on mobile for performance)
+  if (!isMobile) {
+    const eg = new THREE.EdgesGeometry(geom);
+    const el2 = new THREE.LineSegments(eg, edgeMat);
+    scene.add(el2);
+  }
 
   return mesh;
 }
@@ -1061,21 +1099,33 @@ const hideNorte = [], hideSur = [];
 }
 
 // ---- Animate ----
+// For mobile optimization: skip some per-frame checks
+let frameCount = 0;
+const updateInterval = isLowEndDevice ? 3 : (isMobile ? 2 : 1); // Update every N frames (3 for low-end, 2 for mobile, 1 for desktop)
+
 (function animate() {
   requestAnimationFrame(animate);
   controls.update();
-  // Fade out walls the camera is looking through from outside
-  wallTrack.forEach(({ mesh, axis, dir, baseOpacity }) => {
-    const outside = (camera.position[axis] - mesh.position[axis]) * dir > 0;
-    mesh.material.opacity = outside ? 0.0 : 1.0;
-  });
-  // Hide units on the side the camera is looking from
-  camera.getWorldDirection(camFwd);
-  const showNorte = camFwd.z < 0.2;
-  const showSur   = camFwd.z > -0.2;
-  hideNorte.forEach(o => { o.visible = showNorte; });
-  hideSur.forEach(o => { o.visible = showSur; });
-  // Animate interactive panels
+  
+  frameCount++;
+  const shouldUpdate = (frameCount % updateInterval === 0);
+  
+  // Fade out walls the camera is looking through from outside (only update periodically on mobile)
+  if (shouldUpdate || !isMobile) {
+    wallTrack.forEach(({ mesh, axis, dir, baseOpacity }) => {
+      const outside = (camera.position[axis] - mesh.position[axis]) * dir > 0;
+      mesh.material.opacity = outside ? 0.0 : 1.0;
+    });
+    
+    // Hide units on the side the camera is looking from (only update periodically on mobile)
+    camera.getWorldDirection(camFwd);
+    const showNorte = camFwd.z < 0.2;
+    const showSur   = camFwd.z > -0.2;
+    hideNorte.forEach(o => { o.visible = showNorte; });
+    hideSur.forEach(o => { o.visible = showSur; });
+  }
+  
+  // Animate interactive panels (always smooth)
   interactives.forEach(p => {
     p.state += (p.target - p.state) * 0.06;
     if (Math.abs(p.state - p.target) < 0.001) p.state = p.target;
