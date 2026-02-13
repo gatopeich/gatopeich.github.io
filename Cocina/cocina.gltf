@@ -260,13 +260,13 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        0.6,
-        0.9,
-        0.7000000000000001
+        5.94,
+        2.35,
+        2.65
       ],
       "min": [
         0.0,
-        0.0,
+        2.33,
         0.0
       ]
     },
@@ -302,12 +302,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.2,
+        0.6,
         0.9,
         0.7000000000000001
       ],
       "min": [
-        0.6,
+        0.0,
         0.0,
         0.0
       ]
@@ -344,12 +344,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.77,
+        1.2,
         0.9,
         0.7000000000000001
       ],
       "min": [
-        1.2,
+        0.6,
         0.0,
         0.0
       ]
@@ -386,12 +386,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.37,
+        1.77,
         0.9,
         0.7000000000000001
       ],
       "min": [
-        1.77,
+        1.2,
         0.0,
         0.0
       ]
@@ -428,12 +428,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.97,
+        2.37,
         0.9,
         0.7000000000000001
       ],
       "min": [
-        2.37,
+        1.77,
         0.0,
         0.0
       ]
@@ -470,14 +470,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.5700000000000003,
+        2.97,
         0.9,
-        0.7
+        0.7000000000000001
       ],
       "min": [
-        2.97,
+        2.37,
         0.0,
-        0.1
+        0.0
       ]
     },
     {
@@ -512,12 +512,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.17,
+        3.5700000000000003,
         0.9,
         0.7
       ],
       "min": [
-        3.5700000000000003,
+        2.97,
         0.0,
         0.1
       ]
@@ -554,12 +554,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.73,
+        4.17,
         0.9,
         0.7
       ],
       "min": [
-        4.17,
+        3.5700000000000003,
         0.0,
         0.1
       ]
@@ -596,12 +596,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.340000000000001,
-        2.1,
+        4.73,
+        0.9,
         0.7
       ],
       "min": [
-        4.73,
+        4.17,
         0.0,
         0.1
       ]
@@ -638,12 +638,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.9399999999999995,
+        5.340000000000001,
         2.1,
         0.7
       ],
       "min": [
-        5.34,
+        4.73,
         0.0,
         0.1
       ]
@@ -680,14 +680,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.04,
-        0.93,
-        0.7000000000000001
+        5.9399999999999995,
+        2.1,
+        0.7
       ],
       "min": [
+        5.34,
         0.0,
-        0.9,
-        0.0
+        0.1
       ]
     },
     {
@@ -722,14 +722,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.73,
+        3.04,
         0.93,
-        0.7
+        0.7000000000000001
       ],
       "min": [
-        3.04,
+        0.0,
         0.9,
-        0.1
+        0.0
       ]
     },
     {
@@ -764,14 +764,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.04,
-        0.9700000000000001,
-        0.012
+        4.73,
+        0.93,
+        0.7
       ],
       "min": [
-        0.0,
-        0.93,
-        0.0
+        3.04,
+        0.9,
+        0.1
       ]
     },
     {
@@ -806,14 +806,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.73,
+        3.04,
         0.9700000000000001,
-        0.112
+        0.012
       ],
       "min": [
-        3.04,
+        0.0,
         0.93,
-        0.1
+        0.0
       ]
     },
     {
@@ -848,13 +848,13 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.37,
-        2.1,
-        0.45000000000000007
+        4.73,
+        0.9700000000000001,
+        0.112
       ],
       "min": [
         3.04,
-        1.4000000000000001,
+        0.93,
         0.1
       ]
     },
@@ -890,12 +890,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.37,
+        3.37,
         2.1,
         0.45000000000000007
       ],
       "min": [
-        3.37,
+        3.04,
         1.4000000000000001,
         0.1
       ]
@@ -932,12 +932,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.73,
+        4.37,
         2.1,
         0.45000000000000007
       ],
       "min": [
-        4.37,
+        3.37,
         1.4000000000000001,
         0.1
       ]
@@ -974,14 +974,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.17,
-        0.9400000000000001,
-        0.6000000000000001
+        4.73,
+        2.1,
+        0.45000000000000007
       ],
       "min": [
-        3.5700000000000003,
-        0.93,
-        0.2
+        4.37,
+        1.4000000000000001,
+        0.1
       ]
     },
     {
@@ -1016,14 +1016,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.8599999999999999,
-        2.06,
-        0.0
+        4.17,
+        0.9400000000000001,
+        0.6000000000000001
       ],
       "min": [
-        0.12,
-        0.96,
-        -0.01
+        3.5700000000000003,
+        0.93,
+        0.2
       ]
     },
     {
@@ -1058,12 +1058,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.79,
+        1.8599999999999999,
         2.06,
         0.0
       ],
       "min": [
-        2.24,
+        0.12,
         0.96,
         -0.01
       ]
@@ -1100,13 +1100,13 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.8599999999999999,
-        2.245,
+        2.79,
+        2.06,
         0.0
       ],
       "min": [
-        0.12,
-        2.06,
+        2.24,
+        0.96,
         -0.01
       ]
     },
@@ -1142,12 +1142,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.79,
+        1.8599999999999999,
         2.245,
         0.0
       ],
       "min": [
-        2.24,
+        0.12,
         2.06,
         -0.01
       ]
@@ -1184,14 +1184,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.3200000000000003,
-        0.92,
-        0.55
+        2.79,
+        2.245,
+        0.0
       ],
       "min": [
-        1.82,
-        0.9,
-        0.15
+        2.24,
+        2.06,
+        -0.01
       ]
     },
     {
@@ -1226,14 +1226,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.760000000000001,
-        2.1,
-        2.65
+        2.3200000000000003,
+        0.92,
+        0.55
       ],
       "min": [
-        4.94,
-        0.0,
-        2.57
+        1.82,
+        0.9,
+        0.15
       ]
     },
     {
@@ -1268,14 +1268,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.7199999999999998,
-        2.33,
-        2.6500000000000004
+        5.760000000000001,
+        2.1,
+        2.65
       ],
       "min": [
-        1.74,
+        4.94,
         0.0,
-        2.2
+        2.57
       ]
     },
     {
@@ -1310,12 +1310,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.7400000000000002,
-        0.9,
+        2.7199999999999998,
+        2.33,
         2.6500000000000004
       ],
       "min": [
-        1.1400000000000001,
+        1.74,
         0.0,
         2.2
       ]
@@ -1353,12 +1353,12 @@
       "type": "VEC3",
       "max": [
         1.7400000000000002,
-        1.28,
+        0.9,
         2.6500000000000004
       ],
       "min": [
         1.1400000000000001,
-        0.9,
+        0.0,
         2.2
       ]
     },
@@ -1395,12 +1395,12 @@
       "type": "VEC3",
       "max": [
         1.7400000000000002,
-        2.1,
+        1.28,
         2.6500000000000004
       ],
       "min": [
         1.1400000000000001,
-        1.28,
+        0.9,
         2.2
       ]
     },
@@ -1436,13 +1436,13 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.1400000000000001,
+        1.7400000000000002,
         2.1,
         2.6500000000000004
       ],
       "min": [
-        0.76,
-        0.0,
+        1.1400000000000001,
+        1.28,
         2.2
       ]
     },
@@ -1478,12 +1478,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        0.76,
+        1.1400000000000001,
         2.1,
         2.6500000000000004
       ],
       "min": [
-        0.38,
+        0.76,
         0.0,
         2.2
       ]
@@ -1520,12 +1520,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        0.38,
+        0.76,
         2.1,
         2.6500000000000004
       ],
       "min": [
-        0.0,
+        0.38,
         0.0,
         2.2
       ]
@@ -1562,14 +1562,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.12,
-        0.75,
-        2.2
+        0.38,
+        2.1,
+        2.6500000000000004
       ],
       "min": [
-        2.72,
         0.0,
-        1.4000000000000001
+        0.0,
+        2.2
       ]
     },
     {
@@ -1604,14 +1604,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.336666666666667,
-        0.45,
-        2.3000000000000003
+        4.12,
+        0.75,
+        2.2
       ],
       "min": [
-        2.8866666666666667,
+        2.72,
         0.0,
-        1.85
+        1.4000000000000001
       ]
     },
     {
@@ -1646,12 +1646,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.953333333333334,
+        3.336666666666667,
         0.45,
         2.3000000000000003
       ],
       "min": [
-        3.503333333333334,
+        2.8866666666666667,
         0.0,
         1.85
       ]
@@ -1688,14 +1688,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.336666666666667,
+        3.953333333333334,
         0.45,
-        1.75
+        2.3000000000000003
       ],
       "min": [
-        2.8866666666666667,
+        3.503333333333334,
         0.0,
-        1.3
+        1.85
       ]
     },
     {
@@ -1730,12 +1730,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.953333333333334,
+        3.336666666666667,
         0.45,
         1.75
       ],
       "min": [
-        3.503333333333334,
+        2.8866666666666667,
         0.0,
         1.3
       ]
@@ -1772,14 +1772,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        3.0700000000000003,
+        3.953333333333334,
         0.45,
-        2.025
+        1.75
       ],
       "min": [
-        2.62,
+        3.503333333333334,
         0.0,
-        1.575
+        1.3
       ]
     },
     {
@@ -1814,12 +1814,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        4.22,
+        3.0700000000000003,
         0.45,
         2.025
       ],
       "min": [
-        3.77,
+        2.62,
         0.0,
         1.575
       ]
@@ -1856,14 +1856,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.94,
-        2.13,
-        0.7000000000000001
+        4.22,
+        0.45,
+        2.025
       ],
       "min": [
+        3.77,
         0.0,
-        2.1,
-        0.0
+        1.575
       ]
     },
     {
@@ -1898,14 +1898,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.74,
+        5.94,
         2.13,
-        2.6500000000000004
+        0.7000000000000001
       ],
       "min": [
         0.0,
         2.1,
-        2.2
+        0.0
       ]
     },
     {
@@ -1940,14 +1940,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.94,
-        2.33,
-        0.365
+        1.74,
+        2.13,
+        2.6500000000000004
       ],
       "min": [
         0.0,
-        2.13,
-        0.335
+        2.1,
+        2.2
       ]
     },
     {
@@ -1982,14 +1982,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.74,
+        5.94,
         2.33,
-        2.44
+        0.365
       ],
       "min": [
         0.0,
         2.13,
-        2.41
+        0.335
       ]
     },
     {
@@ -2024,14 +2024,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        5.94,
-        2.15,
-        0.385
+        1.74,
+        2.33,
+        2.44
       ],
       "min": [
         0.0,
         2.13,
-        0.365
+        2.41
       ]
     },
     {
@@ -2066,14 +2066,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.74,
+        5.94,
         2.15,
-        2.43
+        0.385
       ],
       "min": [
         0.0,
         2.13,
-        2.41
+        0.365
       ]
     },
     {
@@ -2108,14 +2108,14 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        0.33399999999999996,
-        2.0999999999999996,
-        0.38
+        1.74,
+        2.15,
+        2.43
       ],
       "min": [
-        0.27399999999999997,
-        2.07,
-        0.32
+        0.0,
+        2.13,
+        2.41
       ]
     },
     {
@@ -2150,12 +2150,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        0.942,
+        0.33399999999999996,
         2.0999999999999996,
         0.38
       ],
       "min": [
-        0.8819999999999999,
+        0.27399999999999997,
         2.07,
         0.32
       ]
@@ -2192,12 +2192,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        1.55,
+        0.942,
         2.0999999999999996,
         0.38
       ],
       "min": [
-        1.49,
+        0.8819999999999999,
         2.07,
         0.32
       ]
@@ -2234,12 +2234,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.158,
+        1.55,
         2.0999999999999996,
         0.38
       ],
       "min": [
-        2.098,
+        1.49,
         2.07,
         0.32
       ]
@@ -2276,12 +2276,12 @@
       "count": 36,
       "type": "VEC3",
       "max": [
-        2.7659999999999996,
+        2.158,
         2.0999999999999996,
         0.38
       ],
       "min": [
-        2.7059999999999995,
+        2.098,
         2.07,
         0.32
       ]
@@ -2304,6 +2304,48 @@
     },
     {
       "bufferView": 219,
+      "byteOffset": 0,
+      "componentType": 5123,
+      "normalized": false,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 220,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 36,
+      "type": "VEC3",
+      "max": [
+        2.7659999999999996,
+        2.0999999999999996,
+        0.38
+      ],
+      "min": [
+        2.7059999999999995,
+        2.07,
+        0.32
+      ]
+    },
+    {
+      "bufferView": 221,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 36,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 222,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "normalized": false,
+      "count": 36,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 223,
       "byteOffset": 0,
       "componentType": 5123,
       "normalized": false,
@@ -3635,12 +3677,36 @@
       "byteOffset": 67248,
       "byteLength": 72,
       "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 67320,
+      "byteLength": 432,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 67752,
+      "byteLength": 432,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 68184,
+      "byteLength": 288,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 68472,
+      "byteLength": 72,
+      "target": 34963
     }
   ],
   "buffers": [
     {
       "uri": "cocina.bin",
-      "byteLength": 67320
+      "byteLength": 68544
     }
   ],
   "images": [
@@ -3664,126 +3730,6 @@
     {
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.47,
-          0.56,
-          0.49,
-          0.85
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 0,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "column"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.82,
-          0.75,
-          0.62,
-          0.95
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 2,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "counter"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.72,
-          0.62,
-          0.47,
-          0.85
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "upper"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.6,
-          0.5,
-          0.38,
-          0.75
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "furn"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.47,
-          0.56,
-          0.49,
-          0.85
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.8,
-        "baseColorTexture": {
-          "index": 0,
-          "texCoord": 0
-        }
-      },
-      "emissiveFactor": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "alphaMode": "BLEND",
-      "doubleSided": true,
-      "name": "base"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
           0.85,
           0.85,
           0.85,
@@ -3804,13 +3750,17 @@
     {
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          1.0,
-          0.95,
-          0.7,
-          0.7
+          0.55,
+          0.45,
+          0.35,
+          0.6
         ],
         "metallicFactor": 0.0,
-        "roughnessFactor": 0.8
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        }
       },
       "emissiveFactor": [
         0.0,
@@ -3819,7 +3769,31 @@
       ],
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "name": "light"
+      "name": "door"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.47,
+          0.56,
+          0.49,
+          0.85
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "column"
     },
     {
       "pbrMetallicRoughness": {
@@ -3864,10 +3838,10 @@
     {
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.55,
-          0.45,
-          0.35,
-          0.6
+          0.6,
+          0.5,
+          0.38,
+          0.75
         ],
         "metallicFactor": 0.0,
         "roughnessFactor": 0.8,
@@ -3883,7 +3857,71 @@
       ],
       "alphaMode": "BLEND",
       "doubleSided": true,
-      "name": "door"
+      "name": "furn"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.95,
+          0.7,
+          0.7
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "light"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.47,
+          0.56,
+          0.49,
+          0.85
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "base"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.98,
+          0.98,
+          0.98,
+          0.12
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "ceiling"
     },
     {
       "pbrMetallicRoughness": {
@@ -3932,6 +3970,54 @@
       "alphaMode": "BLEND",
       "doubleSided": true,
       "name": "tile"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.72,
+          0.62,
+          0.47,
+          0.85
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "upper"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.82,
+          0.75,
+          0.62,
+          0.95
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8,
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        }
+      },
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "counter"
     }
   ],
   "meshes": [
@@ -3945,7 +4031,7 @@
           },
           "indices": 3,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Pared Norte izq"
@@ -3960,7 +4046,7 @@
           },
           "indices": 7,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Pared Norte der"
@@ -3975,7 +4061,7 @@
           },
           "indices": 11,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Pared Sur"
@@ -3990,7 +4076,7 @@
           },
           "indices": 15,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Suelo"
@@ -4005,7 +4091,7 @@
           },
           "indices": 19,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Pared Oeste"
@@ -4020,7 +4106,7 @@
           },
           "indices": 23,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
       "name": "Pared Este"
@@ -4035,10 +4121,10 @@
           },
           "indices": 27,
           "mode": 4,
-          "material": 5
+          "material": 8
         }
       ],
-      "name": "Lavadora"
+      "name": "Techo"
     },
     {
       "primitives": [
@@ -4050,10 +4136,10 @@
           },
           "indices": 31,
           "mode": 4,
-          "material": 5
+          "material": 0
         }
       ],
-      "name": "Lavavajillas"
+      "name": "Lavadora"
     },
     {
       "primitives": [
@@ -4065,10 +4151,10 @@
           },
           "indices": 35,
           "mode": 4,
-          "material": 4
+          "material": 0
         }
       ],
-      "name": "Limpieza"
+      "name": "Lavavajillas"
     },
     {
       "primitives": [
@@ -4080,10 +4166,10 @@
           },
           "indices": 39,
           "mode": 4,
-          "material": 4
+          "material": 7
         }
       ],
-      "name": "Cajones fregadero"
+      "name": "Limpieza"
     },
     {
       "primitives": [
@@ -4095,10 +4181,10 @@
           },
           "indices": 43,
           "mode": 4,
-          "material": 4
+          "material": 7
         }
       ],
-      "name": "Cajones"
+      "name": "Cajones fregadero"
     },
     {
       "primitives": [
@@ -4110,7 +4196,7 @@
           },
           "indices": 47,
           "mode": 4,
-          "material": 4
+          "material": 7
         }
       ],
       "name": "Cajones"
@@ -4125,10 +4211,10 @@
           },
           "indices": 51,
           "mode": 4,
-          "material": 5
+          "material": 7
         }
       ],
-      "name": "Inducci\u00f3n/Horno"
+      "name": "Cajones"
     },
     {
       "primitives": [
@@ -4140,10 +4226,10 @@
           },
           "indices": 55,
           "mode": 4,
-          "material": 4
+          "material": 0
         }
       ],
-      "name": "Despensa"
+      "name": "Inducci\u00f3n/Horno"
     },
     {
       "primitives": [
@@ -4155,10 +4241,10 @@
           },
           "indices": 59,
           "mode": 4,
-          "material": 4
+          "material": 7
         }
       ],
-      "name": "Escobero"
+      "name": "Despensa"
     },
     {
       "primitives": [
@@ -4170,10 +4256,10 @@
           },
           "indices": 63,
           "mode": 4,
-          "material": 5
+          "material": 7
         }
       ],
-      "name": "Frigor\u00edfico"
+      "name": "Escobero"
     },
     {
       "primitives": [
@@ -4185,10 +4271,10 @@
           },
           "indices": 67,
           "mode": 4,
-          "material": 1
+          "material": 0
         }
       ],
-      "name": "Encimera izq"
+      "name": "Frigor\u00edfico"
     },
     {
       "primitives": [
@@ -4200,10 +4286,10 @@
           },
           "indices": 71,
           "mode": 4,
-          "material": 1
+          "material": 12
         }
       ],
-      "name": "Encimera der"
+      "name": "Encimera izq"
     },
     {
       "primitives": [
@@ -4215,10 +4301,10 @@
           },
           "indices": 75,
           "mode": 4,
-          "material": 1
+          "material": 12
         }
       ],
-      "name": "Copete izq"
+      "name": "Encimera der"
     },
     {
       "primitives": [
@@ -4230,10 +4316,10 @@
           },
           "indices": 79,
           "mode": 4,
-          "material": 1
+          "material": 12
         }
       ],
-      "name": "Copete der"
+      "name": "Copete izq"
     },
     {
       "primitives": [
@@ -4245,10 +4331,10 @@
           },
           "indices": 83,
           "mode": 4,
-          "material": 2
+          "material": 12
         }
       ],
-      "name": "Vajilla izq"
+      "name": "Copete der"
     },
     {
       "primitives": [
@@ -4260,10 +4346,10 @@
           },
           "indices": 87,
           "mode": 4,
-          "material": 2
+          "material": 11
         }
       ],
-      "name": "Campana/Especias"
+      "name": "Vajilla izq"
     },
     {
       "primitives": [
@@ -4275,10 +4361,10 @@
           },
           "indices": 91,
           "mode": 4,
-          "material": 2
+          "material": 11
         }
       ],
-      "name": "Vajilla der"
+      "name": "Campana/Especias"
     },
     {
       "primitives": [
@@ -4290,10 +4376,10 @@
           },
           "indices": 95,
           "mode": 4,
-          "material": 5
+          "material": 11
         }
       ],
-      "name": "Placa inducci\u00f3n"
+      "name": "Vajilla der"
     },
     {
       "primitives": [
@@ -4305,10 +4391,10 @@
           },
           "indices": 99,
           "mode": 4,
-          "material": 8
+          "material": 0
         }
       ],
-      "name": "Ventana grande"
+      "name": "Placa inducci\u00f3n"
     },
     {
       "primitives": [
@@ -4320,10 +4406,10 @@
           },
           "indices": 103,
           "mode": 4,
-          "material": 8
+          "material": 4
         }
       ],
-      "name": "Ventana peque\u00f1a"
+      "name": "Ventana grande"
     },
     {
       "primitives": [
@@ -4335,10 +4421,10 @@
           },
           "indices": 107,
           "mode": 4,
-          "material": 10
+          "material": 4
         }
       ],
-      "name": "Persiana grande"
+      "name": "Ventana peque\u00f1a"
     },
     {
       "primitives": [
@@ -4350,10 +4436,10 @@
           },
           "indices": 111,
           "mode": 4,
-          "material": 10
+          "material": 9
         }
       ],
-      "name": "Persiana peque\u00f1a"
+      "name": "Persiana grande"
     },
     {
       "primitives": [
@@ -4365,10 +4451,10 @@
           },
           "indices": 115,
           "mode": 4,
-          "material": 7
+          "material": 9
         }
       ],
-      "name": "Fregadero"
+      "name": "Persiana peque\u00f1a"
     },
     {
       "primitives": [
@@ -4380,10 +4466,10 @@
           },
           "indices": 119,
           "mode": 4,
-          "material": 9
+          "material": 3
         }
       ],
-      "name": "Puerta"
+      "name": "Fregadero"
     },
     {
       "primitives": [
@@ -4395,10 +4481,10 @@
           },
           "indices": 123,
           "mode": 4,
-          "material": 11
+          "material": 1
         }
       ],
-      "name": "Columna azulejo"
+      "name": "Puerta"
     },
     {
       "primitives": [
@@ -4410,10 +4496,10 @@
           },
           "indices": 127,
           "mode": 4,
-          "material": 0
+          "material": 10
         }
       ],
-      "name": "Microondas base"
+      "name": "Columna azulejo"
     },
     {
       "primitives": [
@@ -4425,10 +4511,10 @@
           },
           "indices": 131,
           "mode": 4,
-          "material": 5
+          "material": 2
         }
       ],
-      "name": "Microondas"
+      "name": "Microondas base"
     },
     {
       "primitives": [
@@ -4440,10 +4526,10 @@
           },
           "indices": 135,
           "mode": 4,
-          "material": 2
+          "material": 0
         }
       ],
-      "name": "Repisa electrodom\u00e9sticos"
+      "name": "Microondas"
     },
     {
       "primitives": [
@@ -4455,10 +4541,10 @@
           },
           "indices": 139,
           "mode": 4,
-          "material": 0
+          "material": 11
         }
       ],
-      "name": "Despensa Sur 1"
+      "name": "Repisa electrodom\u00e9sticos"
     },
     {
       "primitives": [
@@ -4473,7 +4559,7 @@
           "material": 2
         }
       ],
-      "name": "Vitrina"
+      "name": "Despensa Sur 1"
     },
     {
       "primitives": [
@@ -4485,10 +4571,10 @@
           },
           "indices": 147,
           "mode": 4,
-          "material": 0
+          "material": 11
         }
       ],
-      "name": "Despensa Sur 2"
+      "name": "Vitrina"
     },
     {
       "primitives": [
@@ -4500,10 +4586,10 @@
           },
           "indices": 151,
           "mode": 4,
-          "material": 3
+          "material": 2
         }
       ],
-      "name": "Mesa comedor"
+      "name": "Despensa Sur 2"
     },
     {
       "primitives": [
@@ -4515,10 +4601,10 @@
           },
           "indices": 155,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 1"
+      "name": "Mesa comedor"
     },
     {
       "primitives": [
@@ -4530,10 +4616,10 @@
           },
           "indices": 159,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 2"
+      "name": "Silla 1"
     },
     {
       "primitives": [
@@ -4545,10 +4631,10 @@
           },
           "indices": 163,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 3"
+      "name": "Silla 2"
     },
     {
       "primitives": [
@@ -4560,10 +4646,10 @@
           },
           "indices": 167,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 4"
+      "name": "Silla 3"
     },
     {
       "primitives": [
@@ -4575,10 +4661,10 @@
           },
           "indices": 171,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 5"
+      "name": "Silla 4"
     },
     {
       "primitives": [
@@ -4590,10 +4676,10 @@
           },
           "indices": 175,
           "mode": 4,
-          "material": 3
+          "material": 5
         }
       ],
-      "name": "Silla 6"
+      "name": "Silla 5"
     },
     {
       "primitives": [
@@ -4605,10 +4691,10 @@
           },
           "indices": 179,
           "mode": 4,
-          "material": 2
+          "material": 5
         }
       ],
-      "name": "Cornisa Norte"
+      "name": "Silla 6"
     },
     {
       "primitives": [
@@ -4620,10 +4706,10 @@
           },
           "indices": 183,
           "mode": 4,
-          "material": 2
+          "material": 11
         }
       ],
-      "name": "Cornisa Sur"
+      "name": "Cornisa Norte"
     },
     {
       "primitives": [
@@ -4635,10 +4721,10 @@
           },
           "indices": 187,
           "mode": 4,
-          "material": 2
+          "material": 11
         }
       ],
-      "name": "Cove Norte"
+      "name": "Cornisa Sur"
     },
     {
       "primitives": [
@@ -4650,10 +4736,10 @@
           },
           "indices": 191,
           "mode": 4,
-          "material": 2
+          "material": 8
         }
       ],
-      "name": "Cove Sur"
+      "name": "Cove Norte"
     },
     {
       "primitives": [
@@ -4665,10 +4751,10 @@
           },
           "indices": 195,
           "mode": 4,
-          "material": 6
+          "material": 8
         }
       ],
-      "name": "LED Norte"
+      "name": "Cove Sur"
     },
     {
       "primitives": [
@@ -4683,7 +4769,7 @@
           "material": 6
         }
       ],
-      "name": "LED Sur"
+      "name": "LED Norte"
     },
     {
       "primitives": [
@@ -4698,7 +4784,7 @@
           "material": 6
         }
       ],
-      "name": "Foco 1"
+      "name": "LED Sur"
     },
     {
       "primitives": [
@@ -4713,7 +4799,7 @@
           "material": 6
         }
       ],
-      "name": "Foco 2"
+      "name": "Foco 1"
     },
     {
       "primitives": [
@@ -4728,7 +4814,7 @@
           "material": 6
         }
       ],
-      "name": "Foco 3"
+      "name": "Foco 2"
     },
     {
       "primitives": [
@@ -4743,7 +4829,7 @@
           "material": 6
         }
       ],
-      "name": "Foco 4"
+      "name": "Foco 3"
     },
     {
       "primitives": [
@@ -4754,6 +4840,21 @@
             "TEXCOORD_0": 218
           },
           "indices": 219,
+          "mode": 4,
+          "material": 6
+        }
+      ],
+      "name": "Foco 4"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 220,
+            "NORMAL": 221,
+            "TEXCOORD_0": 222
+          },
+          "indices": 223,
           "mode": 4,
           "material": 6
         }
@@ -4788,23 +4889,23 @@
     },
     {
       "mesh": 6,
-      "name": "Lavadora"
+      "name": "Techo"
     },
     {
       "mesh": 7,
-      "name": "Lavavajillas"
+      "name": "Lavadora"
     },
     {
       "mesh": 8,
-      "name": "Limpieza"
+      "name": "Lavavajillas"
     },
     {
       "mesh": 9,
-      "name": "Cajones fregadero"
+      "name": "Limpieza"
     },
     {
       "mesh": 10,
-      "name": "Cajones"
+      "name": "Cajones fregadero"
     },
     {
       "mesh": 11,
@@ -4812,174 +4913,178 @@
     },
     {
       "mesh": 12,
-      "name": "Inducci\u00f3n/Horno"
+      "name": "Cajones"
     },
     {
       "mesh": 13,
-      "name": "Despensa"
+      "name": "Inducci\u00f3n/Horno"
     },
     {
       "mesh": 14,
-      "name": "Escobero"
+      "name": "Despensa"
     },
     {
       "mesh": 15,
-      "name": "Frigor\u00edfico"
+      "name": "Escobero"
     },
     {
       "mesh": 16,
-      "name": "Encimera izq"
+      "name": "Frigor\u00edfico"
     },
     {
       "mesh": 17,
-      "name": "Encimera der"
+      "name": "Encimera izq"
     },
     {
       "mesh": 18,
-      "name": "Copete izq"
+      "name": "Encimera der"
     },
     {
       "mesh": 19,
-      "name": "Copete der"
+      "name": "Copete izq"
     },
     {
       "mesh": 20,
-      "name": "Vajilla izq"
+      "name": "Copete der"
     },
     {
       "mesh": 21,
-      "name": "Campana/Especias"
+      "name": "Vajilla izq"
     },
     {
       "mesh": 22,
-      "name": "Vajilla der"
+      "name": "Campana/Especias"
     },
     {
       "mesh": 23,
-      "name": "Placa inducci\u00f3n"
+      "name": "Vajilla der"
     },
     {
       "mesh": 24,
-      "name": "Ventana grande"
+      "name": "Placa inducci\u00f3n"
     },
     {
       "mesh": 25,
-      "name": "Ventana peque\u00f1a"
+      "name": "Ventana grande"
     },
     {
       "mesh": 26,
-      "name": "Persiana grande"
+      "name": "Ventana peque\u00f1a"
     },
     {
       "mesh": 27,
-      "name": "Persiana peque\u00f1a"
+      "name": "Persiana grande"
     },
     {
       "mesh": 28,
-      "name": "Fregadero"
+      "name": "Persiana peque\u00f1a"
     },
     {
       "mesh": 29,
-      "name": "Puerta"
+      "name": "Fregadero"
     },
     {
       "mesh": 30,
-      "name": "Columna azulejo"
+      "name": "Puerta"
     },
     {
       "mesh": 31,
-      "name": "Microondas base"
+      "name": "Columna azulejo"
     },
     {
       "mesh": 32,
-      "name": "Microondas"
+      "name": "Microondas base"
     },
     {
       "mesh": 33,
-      "name": "Repisa electrodom\u00e9sticos"
+      "name": "Microondas"
     },
     {
       "mesh": 34,
-      "name": "Despensa Sur 1"
+      "name": "Repisa electrodom\u00e9sticos"
     },
     {
       "mesh": 35,
-      "name": "Vitrina"
+      "name": "Despensa Sur 1"
     },
     {
       "mesh": 36,
-      "name": "Despensa Sur 2"
+      "name": "Vitrina"
     },
     {
       "mesh": 37,
-      "name": "Mesa comedor"
+      "name": "Despensa Sur 2"
     },
     {
       "mesh": 38,
-      "name": "Silla 1"
+      "name": "Mesa comedor"
     },
     {
       "mesh": 39,
-      "name": "Silla 2"
+      "name": "Silla 1"
     },
     {
       "mesh": 40,
-      "name": "Silla 3"
+      "name": "Silla 2"
     },
     {
       "mesh": 41,
-      "name": "Silla 4"
+      "name": "Silla 3"
     },
     {
       "mesh": 42,
-      "name": "Silla 5"
+      "name": "Silla 4"
     },
     {
       "mesh": 43,
-      "name": "Silla 6"
+      "name": "Silla 5"
     },
     {
       "mesh": 44,
-      "name": "Cornisa Norte"
+      "name": "Silla 6"
     },
     {
       "mesh": 45,
-      "name": "Cornisa Sur"
+      "name": "Cornisa Norte"
     },
     {
       "mesh": 46,
-      "name": "Cove Norte"
+      "name": "Cornisa Sur"
     },
     {
       "mesh": 47,
-      "name": "Cove Sur"
+      "name": "Cove Norte"
     },
     {
       "mesh": 48,
-      "name": "LED Norte"
+      "name": "Cove Sur"
     },
     {
       "mesh": 49,
-      "name": "LED Sur"
+      "name": "LED Norte"
     },
     {
       "mesh": 50,
-      "name": "Foco 1"
+      "name": "LED Sur"
     },
     {
       "mesh": 51,
-      "name": "Foco 2"
+      "name": "Foco 1"
     },
     {
       "mesh": 52,
-      "name": "Foco 3"
+      "name": "Foco 2"
     },
     {
       "mesh": 53,
-      "name": "Foco 4"
+      "name": "Foco 3"
     },
     {
       "mesh": 54,
+      "name": "Foco 4"
+    },
+    {
+      "mesh": 55,
       "name": "Foco 5"
     }
   ],
@@ -5049,7 +5154,8 @@
         51,
         52,
         53,
-        54
+        54,
+        55
       ]
     }
   ],
