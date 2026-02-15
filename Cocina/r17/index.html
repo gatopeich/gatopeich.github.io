@@ -18,40 +18,70 @@
 <body>
   <h1>Cocina 3D — Vista previa</h1>
   <div class="pr-info">
-    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: Swap frigorifico and escobero to enable full door opening</a></h2>
+    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: Make LEDs and focus lights visible when off (light grey vs black)</a></h2>
     <p>Branch: <span class="branch">copilot/swap-frigorifico-and-escobero</span></p>
-    <div class="pr-body">## Plan: Swap Frigorifico and Escobero ✅ COMPLETE<br>
+    <div class="pr-body">## Swap frigorifico and escobero to enable full door opening, add storage shelves and fix dishwasher door<br>
 <br>
-### Requirements Met:<br>
-- [x] **Frigorifico and Escobero positions swapped** ✓<br>
-- [x] **Frigorifico width = 60 cm** (Module 9: x=474-534) ✓<br>
-- [x] **Escobero width = 60 cm** (Module 10: x=534-594) ✓ **[UPDATED]**<br>
-- [x] **Both doors have hinges on East side (right hinge)** ✓<br>
-- [x] **Layout allows frigorifico door to open beyond 90 degrees** ✓<br>
-- [x] **Door symbology with diagonal lines meeting at 2/3 height** ✓ **[FIXED]**<br>
+### 📋 Quick Links<br>
+- 🏗️ [Memoria Descriptiva](./memoria_descriptiva.md) - Architectural specification (source of truth)<br>
+- 📐 [Alzado Norte (North Wall Elevation)](./alzado_norte.svg) - North wall elevation drawing<br>
+- 📐 [Alzado Sur (South Wall Elevation)](./alzado_sur.svg) - South wall elevation drawing<br>
+- 🔌 [Plano Eléctrico](./plano_electrico.svg) - Electrical plan<br>
+- 🔄 [Open Pull Requests](https://github.com/gatopeich/Cocina/pulls)<br>
 <br>
-### Width Adjustments (per comment feedback):<br>
-- [x] **Escobero**: 61 → 60 cm (standard width)<br>
-- [x] **Despensa**: 56 → 57 cm (+1 cm)<br>
-- [x] **Vajilla der**: 56 → 57 cm (+1 cm, matches Despensa below)<br>
-- [x] **LED bajo muebles**: 229 → 230 cm (extends to x=534)<br>
+---<br>
 <br>
-### Door Hinge Symbol Fix (per comment feedback):<br>
-- [x] Lines now start at **top and bottom hinge corners**<br>
-- [x] Lines **meet at opening edge at 2/3 height**:<br>
-  - Base cabinets (90cm): meet at y=60<br>
-  - Tall columns (220cm): meet at y=147<br>
-  - Upper cabinets (80cm): meet at y=193<br>
-- [x] Applied to all cabinets on both Pared Norte and Pared Sur<br>
+## Recent Changes<br>
 <br>
-### Files Updated:<br>
-- [x] `memoria_descriptiva.md` - All widths, positions, LED width updated<br>
-- [x] `cocina_3d.ipynb` - Module widths, LED width, door hinge lines fixed<br>
-- [x] `alzado_norte.svg`, `alzado_sur.svg` - Regenerated with correct dimensions and door symbols<br>
-- [x] `cocina.obj`, `cocina.mtl` - Regenerated 3D model<br>
+### Door Animation Improvements ✨<br>
+- [x] **Doubled door animation speed** (0.06 → 0.12 interpolation)<br>
+- [x] **Fridge door opens to 100°** (&gt;90°) instead of 80° for easier inner drawer access<br>
+- [x] Other doors remain at 80° opening angle<br>
+- [x] **Refactored with getDoorOpenAngle() helper** for maintainability<br>
+- [x] Addresses original requirement: fridge door can now fully open beyond 90°<br>
 <br>
-### Summary:<br>
-All modules maintain 594cm total. Door hinge symbols now properly show architectural notation with diagonal lines converging at 2/3 height on the opening edge.<br>
+### HTML Viewer Updates<br>
+- [x] Added navigation links to HTML viewer info panel<br>
+- [x] Links to memoria descriptiva, alzados, plano eléctrico<br>
+- [x] Link to open pull requests on GitHub<br>
+<br>
+### Drawer Interior<br>
+- [x] Added wood sides and bottom to agave drawers<br>
+- [x] Left and right side panels (Como Ash 02 wood)<br>
+- [x] Bottom panel (Como Ash 02 wood)<br>
+- [x] All panels 2cm smaller than drawer unit (inset)<br>
+- [x] DoubleSide surfaces for visibility<br>
+- [x] Thickness: 1.5cm sides, 1.5cm bottom<br>
+<br>
+### LED and Focus Light Visibility<br>
+- [x] LEDs and focus lights appear light grey (0xbbbbbb) when off<br>
+<br>
+## Layout Changes<br>
+<br>
+**Before:** `Despensa(56) | Escobero(61) | Frigorífico(60)` at x=417-594  <br>
+**After:** `Despensa(57) | Frigorífico(60) | Escobero(60)` at x=417-594<br>
+<br>
+- Frigorifico: x=534→474 (60cm maintained)<br>
+- Escobero: x=474→534 (61→60cm) with 2 interior shelves<br>
+- Despensa: 56→57cm (+1cm)<br>
+- Vajilla der: 56→57cm (+1cm)<br>
+- Lavavajillas: bottom-hinged door (opens downward)<br>
+- Both tall column doors: right hinge (East), open West<br>
+<br>
+## Implementation<br>
+<br>
+### Viewer (`viewer.js`)<br>
+- **getDoorOpenAngle(elName)**: Helper function returns 1.75 rad (100°) for fridge, 1.4 rad (80°) for others<br>
+- **Door animation**: Interpolation 0.06 → 0.12 (2x faster)<br>
+- **Drawer interiors**: Wood sides and bottom with DoubleSide<br>
+- **LED off-state**: Light grey (0xbbbbbb) instead of black<br>
+<br>
+### Key Improvements<br>
+1. ✅ Fridge door opens &gt;90° for easy freezer drawer access<br>
+2. ✅ All doors open 2x faster<br>
+3. ✅ Complete drawer interiors with wood<br>
+4. ✅ UI navigation links to design docs<br>
+5. ✅ Clean code with helper functions<br>
 <br>
 &lt;!-- START COPILOT ORIGINAL PROMPT --&gt;<br>
 <br>
