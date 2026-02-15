@@ -18,70 +18,43 @@
 <body>
   <h1>Cocina 3D — Vista previa</h1>
   <div class="pr-info">
-    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: Make LEDs and focus lights visible when off (light grey vs black)</a></h2>
+    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: Swap fridge/broom positions, add drawer interiors, enhance door animations</a></h2>
     <p>Branch: <span class="branch">copilot/swap-frigorifico-and-escobero</span></p>
-    <div class="pr-body">## Swap frigorifico and escobero to enable full door opening, add storage shelves and fix dishwasher door<br>
-<br>
-### 📋 Quick Links<br>
-- 🏗️ [Memoria Descriptiva](./memoria_descriptiva.md) - Architectural specification (source of truth)<br>
-- 📐 [Alzado Norte (North Wall Elevation)](./alzado_norte.svg) - North wall elevation drawing<br>
-- 📐 [Alzado Sur (South Wall Elevation)](./alzado_sur.svg) - South wall elevation drawing<br>
-- 🔌 [Plano Eléctrico](./plano_electrico.svg) - Electrical plan<br>
-- 🔄 [Open Pull Requests](https://github.com/gatopeich/Cocina/pulls)<br>
-<br>
----<br>
-<br>
-## Recent Changes<br>
-<br>
-### Door Animation Improvements ✨<br>
-- [x] **Doubled door animation speed** (0.06 → 0.12 interpolation)<br>
-- [x] **Fridge door opens to 100°** (&gt;90°) instead of 80° for easier inner drawer access<br>
-- [x] Other doors remain at 80° opening angle<br>
-- [x] **Refactored with getDoorOpenAngle() helper** for maintainability<br>
-- [x] Addresses original requirement: fridge door can now fully open beyond 90°<br>
-<br>
-### HTML Viewer Updates<br>
-- [x] Added navigation links to HTML viewer info panel<br>
-- [x] Links to memoria descriptiva, alzados, plano eléctrico<br>
-- [x] Link to open pull requests on GitHub<br>
-<br>
-### Drawer Interior<br>
-- [x] Added wood sides and bottom to agave drawers<br>
-- [x] Left and right side panels (Como Ash 02 wood)<br>
-- [x] Bottom panel (Como Ash 02 wood)<br>
-- [x] All panels 2cm smaller than drawer unit (inset)<br>
-- [x] DoubleSide surfaces for visibility<br>
-- [x] Thickness: 1.5cm sides, 1.5cm bottom<br>
-<br>
-### LED and Focus Light Visibility<br>
-- [x] LEDs and focus lights appear light grey (0xbbbbbb) when off<br>
+    <div class="pr-body">Frigorifico door blocked by corner, preventing &gt;90° opening required for freezer drawer access. Swapped with escobero to provide clearance.<br>
 <br>
 ## Layout Changes<br>
+- **Position swap**: Frigorifico x=534→474, Escobero x=474→534 (both 60cm)<br>
+- **Width rebalancing**: Despensa +1cm, Vajilla der +1cm, Escobero -1cm (maintains 594cm total)<br>
+- **Door configuration**: Both right-hinged (East), open West<br>
+- **Escobero storage**: Added 2 shelves at y=150/180cm for vacuum and cleaning supplies<br>
 <br>
-**Before:** `Despensa(56) | Escobero(61) | Frigorífico(60)` at x=417-594  <br>
-**After:** `Despensa(57) | Frigorífico(60) | Escobero(60)` at x=417-594<br>
+## Drawer Enhancements<br>
+Added Como Ash 02 wood interiors to agave drawer fronts:<br>
 <br>
-- Frigorifico: x=534→474 (60cm maintained)<br>
-- Escobero: x=474→534 (61→60cm) with 2 interior shelves<br>
-- Despensa: 56→57cm (+1cm)<br>
-- Vajilla der: 56→57cm (+1cm)<br>
-- Lavavajillas: bottom-hinged door (opens downward)<br>
-- Both tall column doors: right hinge (East), open West<br>
+```javascript<br>
+// 2cm inset panels, 1.5cm thick, attached to drawerGroup<br>
+const woodMatSide = getTexMat('como_ash', sideD, sideH);<br>
+woodMatSide.side = THREE.DoubleSide;<br>
+```<br>
 <br>
-## Implementation<br>
+Left/right sides and bottom panels move with drawer.<br>
 <br>
-### Viewer (`viewer.js`)<br>
-- **getDoorOpenAngle(elName)**: Helper function returns 1.75 rad (100°) for fridge, 1.4 rad (80°) for others<br>
-- **Door animation**: Interpolation 0.06 → 0.12 (2x faster)<br>
-- **Drawer interiors**: Wood sides and bottom with DoubleSide<br>
-- **LED off-state**: Light grey (0xbbbbbb) instead of black<br>
+## Animation Improvements<br>
+```javascript<br>
+// 2x faster door animation (0.06 → 0.12 interpolation)<br>
+p.state += (p.target - p.state) * 0.12;<br>
 <br>
-### Key Improvements<br>
-1. ✅ Fridge door opens &gt;90° for easy freezer drawer access<br>
-2. ✅ All doors open 2x faster<br>
-3. ✅ Complete drawer interiors with wood<br>
-4. ✅ UI navigation links to design docs<br>
-5. ✅ Clean code with helper functions<br>
+// Fridge opens 100° vs 80° for other doors<br>
+function getDoorOpenAngle(elName) {<br>
+  return /Frigor/.test(elName) ? 1.75 : 1.4;  // radians<br>
+}<br>
+```<br>
+<br>
+## Additional Changes<br>
+- **Lavavajillas**: Changed to bottom-hinged (y=10cm), opens downward<br>
+- **LED visibility**: Off-state changed from black (0x000000) to light grey (0xbbbbbb)<br>
+- **HTML viewer**: Added navigation links to memoria, alzados, plano eléctrico, and PRs<br>
+- **Alzado symbols**: Diagonal dashed lines from hinge corners meet at 2/3 edge height<br>
 <br>
 &lt;!-- START COPILOT ORIGINAL PROMPT --&gt;<br>
 <br>
