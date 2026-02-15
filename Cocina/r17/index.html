@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cocina 3D — PR #17</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; padding: 1em; }
+    h1 { color: #333; }
+    h2 { color: #555; margin-top: 1.5em; }
+    a { color: #0066cc; }
+    ul { line-height: 2; }
+    .pr-info { background: #f0f4f8; border-left: 4px solid #0066cc; padding: 1em 1.5em; border-radius: 4px; margin-bottom: 1.5em; }
+    .pr-info h2 { margin-top: 0; color: #0066cc; }
+    .pr-body { color: #555; line-height: 1.6; }
+    .branch { font-family: monospace; background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Cocina 3D — Vista previa</h1>
+  <div class="pr-info">
+    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: [WIP] Update kitchen layout by swapping frigorifico and escobero</a></h2>
+    <p>Branch: <span class="branch">copilot/swap-frigorifico-and-escobero</span></p>
+    <div class="pr-body">## Plan: Swap Frigorifico and Escobero ✅ COMPLETE<br>
+<br>
+### Requirements Met:<br>
+- [x] **Frigorifico and Escobero positions swapped** ✓<br>
+- [x] **Frigorifico width = 60 cm** (Module 9: x=473-533) ✓<br>
+- [x] **Escobero width = 61 cm** (Module 10: x=533-594) ✓<br>
+- [x] **Both doors have hinges on East side (right hinge)** ✓<br>
+- [x] **Layout allows frigorifico door to open beyond 90 degrees** ✓<br>
+- [x] **Door symbology added to alzados** (standard architectural notation) ✓<br>
+<br>
+### Files Updated:<br>
+- [x] `memoria_descriptiva.md` - All positions and measurements updated<br>
+- [x] `cocina_3d.ipynb` - Module definitions, LED width, electrical outlets, door hinge symbols<br>
+- [x] `viewer.js` - Door hinge configuration updated<br>
+- [x] `alzado_norte.svg`, `alzado_sur.svg` - Regenerated with door hinge symbols<br>
+- [x] `cocina.obj`, `cocina.mtl` - Regenerated 3D model<br>
+<br>
+### Door Hinge Symbols:<br>
+Standard architectural notation implemented with two dashed lines from top and bottom hinge points:<br>
+- **Pared Norte**: 8 cabinets (Lavadora, Lavavajillas, Limpieza, Despensa, Frigorifico, Escobero, Vajilla izq, Vajilla der)<br>
+- **Pared Sur**: 4 cabinets (Caldera, Despensa Sur, Micro base, Puerta)<br>
+<br>
+### Code Review:<br>
+- [x] Fixed calculation comment (53+60+56+60+61 = 290)<br>
+- [x] All measurements verified and consistent<br>
+- [x] Memory descriptiva is single source of truth ✓<br>
+<br>
+&lt;!-- START COPILOT ORIGINAL PROMPT --&gt;<br>
+<br>
+<br>
+<br>
+&lt;details&gt;<br>
+<br>
+&lt;summary&gt;Original prompt&lt;/summary&gt;<br>
+<br>
+&gt; ## Problem<br>
+&gt; The current kitchen layout has the frigorifico (refrigerator) positioned in a way that prevents its door from opening more than 90 degrees. This limits access and usability.<br>
+&gt; <br>
+&gt; ## Solution<br>
+&gt; Exchange the positions of the frigorifico and escobero (broom closet) so that:<br>
+&gt; 1. The frigorifico has sufficient clearance to open its door more than 90 degrees<br>
+&gt; 2. Both the frigorifico and escobero doors have hinges on the East side<br>
+&gt; 3. The swap improves the overall functionality of the kitchen layout<br>
+&gt; <br>
+&gt; ## Requirements<br>
+&gt; - Swap the positions of frigorifico and escobero in the kitchen layout<br>
+&gt; - Ensure both doors have hinges positioned on the East side<br>
+&gt; - Maintain any existing constraints or relationships with other kitchen elements<br>
+&gt; - Verify that the new layout allows the frigorifico door to open beyond 90 degrees<br>
+&gt; <br>
+&gt; ## Files to Review<br>
+&gt; Look for kitchen layout files in the repository that define the positions of these elements. This may be in Jupyter Notebook files (.ipynb) or JavaScript files (.js) based on the repository's language composition.<br>
+<br>
+<br>
+&lt;/details&gt;<br>
+<br>
+<br>
+<br>
+&lt;!-- START COPILOT CODING AGENT SUFFIX --&gt;<br>
+<br>
+*This pull request was created from Copilot chat.*<br>
+&gt;<br>
+<br>
+&lt;!-- START COPILOT CODING AGENT TIPS --&gt;<br>
+---<br>
+<br>
+💬 We'd love your input! Share your thoughts on Copilot coding agent in our [2 minute survey](https://gh.io/copilot-coding-agent-survey).<br>
+<br></div>
+  </div>
+  <h2>Archivos generados</h2>
+  <ul>
+    <li><a href="cocina.html">cocina.html</a> — Visor 3D interactivo</li>
+    <li><a href="cocina.obj">cocina.obj</a> — Modelo OBJ</li>
+    <li><a href="cocina.mtl">cocina.mtl</a> — Materiales MTL</li>
+  </ul>
+</body>
+</html>
