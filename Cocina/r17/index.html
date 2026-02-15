@@ -18,34 +18,40 @@
 <body>
   <h1>Cocina 3D — Vista previa</h1>
   <div class="pr-info">
-    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: [WIP] Update kitchen layout by swapping frigorifico and escobero</a></h2>
+    <h2><a href="https://github.com/gatopeich/Cocina/pull/17">PR #17: Swap frigorifico and escobero to enable full door opening</a></h2>
     <p>Branch: <span class="branch">copilot/swap-frigorifico-and-escobero</span></p>
     <div class="pr-body">## Plan: Swap Frigorifico and Escobero ✅ COMPLETE<br>
 <br>
 ### Requirements Met:<br>
 - [x] **Frigorifico and Escobero positions swapped** ✓<br>
-- [x] **Frigorifico width = 60 cm** (Module 9: x=473-533) ✓<br>
-- [x] **Escobero width = 61 cm** (Module 10: x=533-594) ✓<br>
+- [x] **Frigorifico width = 60 cm** (Module 9: x=474-534) ✓<br>
+- [x] **Escobero width = 60 cm** (Module 10: x=534-594) ✓ **[UPDATED]**<br>
 - [x] **Both doors have hinges on East side (right hinge)** ✓<br>
 - [x] **Layout allows frigorifico door to open beyond 90 degrees** ✓<br>
-- [x] **Door symbology added to alzados** (standard architectural notation) ✓<br>
+- [x] **Door symbology with diagonal lines meeting at 2/3 height** ✓ **[FIXED]**<br>
+<br>
+### Width Adjustments (per comment feedback):<br>
+- [x] **Escobero**: 61 → 60 cm (standard width)<br>
+- [x] **Despensa**: 56 → 57 cm (+1 cm)<br>
+- [x] **Vajilla der**: 56 → 57 cm (+1 cm, matches Despensa below)<br>
+- [x] **LED bajo muebles**: 229 → 230 cm (extends to x=534)<br>
+<br>
+### Door Hinge Symbol Fix (per comment feedback):<br>
+- [x] Lines now start at **top and bottom hinge corners**<br>
+- [x] Lines **meet at opening edge at 2/3 height**:<br>
+  - Base cabinets (90cm): meet at y=60<br>
+  - Tall columns (220cm): meet at y=147<br>
+  - Upper cabinets (80cm): meet at y=193<br>
+- [x] Applied to all cabinets on both Pared Norte and Pared Sur<br>
 <br>
 ### Files Updated:<br>
-- [x] `memoria_descriptiva.md` - All positions and measurements updated<br>
-- [x] `cocina_3d.ipynb` - Module definitions, LED width, electrical outlets, door hinge symbols<br>
-- [x] `viewer.js` - Door hinge configuration updated<br>
-- [x] `alzado_norte.svg`, `alzado_sur.svg` - Regenerated with door hinge symbols<br>
+- [x] `memoria_descriptiva.md` - All widths, positions, LED width updated<br>
+- [x] `cocina_3d.ipynb` - Module widths, LED width, door hinge lines fixed<br>
+- [x] `alzado_norte.svg`, `alzado_sur.svg` - Regenerated with correct dimensions and door symbols<br>
 - [x] `cocina.obj`, `cocina.mtl` - Regenerated 3D model<br>
 <br>
-### Door Hinge Symbols:<br>
-Standard architectural notation implemented with two dashed lines from top and bottom hinge points:<br>
-- **Pared Norte**: 8 cabinets (Lavadora, Lavavajillas, Limpieza, Despensa, Frigorifico, Escobero, Vajilla izq, Vajilla der)<br>
-- **Pared Sur**: 4 cabinets (Caldera, Despensa Sur, Micro base, Puerta)<br>
-<br>
-### Code Review:<br>
-- [x] Fixed calculation comment (53+60+56+60+61 = 290)<br>
-- [x] All measurements verified and consistent<br>
-- [x] Memory descriptiva is single source of truth ✓<br>
+### Summary:<br>
+All modules maintain 594cm total. Door hinge symbols now properly show architectural notation with diagonal lines converging at 2/3 height on the opening edge.<br>
 <br>
 &lt;!-- START COPILOT ORIGINAL PROMPT --&gt;<br>
 <br>
