@@ -23,7 +23,7 @@ const TEX_DATA = {"como_ash": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAA
 const ELEMENTS = [{"name": "Pared Norte izq", "type": "wall", "x": 0.0, "y": 0.0, "z": -0.02, "w": 3.04, "h": 2.33, "d": 0.02}, {"name": "Pared Norte der", "type": "wall", "x": 3.04, "y": 0.0, "z": 0.08, "w": 2.9, "h": 2.33, "d": 0.02}, {"name": "Cara retranqueo", "type": "wall", "x": 3.02, "y": 0.0, "z": 0.0, "w": 0.02, "h": 2.33, "d": 0.1}, {"name": "Pared Sur", "type": "wall", "x": 0.0, "y": 0.0, "z": 2.65, "w": 5.94, "h": 2.33, "d": 0.02}, {"name": "Suelo", "type": "wall", "x": 0.0, "y": -0.02, "z": 0.0, "w": 5.94, "h": 0.02, "d": 2.65}, {"name": "Pared Oeste", "type": "wall", "x": -0.02, "y": 0.0, "z": 0.0, "w": 0.02, "h": 2.33, "d": 2.65}, {"name": "Pared Este", "type": "wall", "x": 5.94, "y": 0.0, "z": 0.0, "w": 0.02, "h": 2.33, "d": 2.65}, {"name": "Techo", "type": "ceiling", "x": 0.0, "y": 2.33, "z": 0.0, "w": 5.94, "h": 0.02, "d": 2.65}, {"name": "Lavadora", "type": "appl", "x": 0.0, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "door"}, {"name": "Lavavajillas", "type": "appl", "x": 0.6, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "oven_door"}, {"name": "Detergentes", "type": "base", "x": 1.2, "y": 0.0, "z": 0.1, "w": 0.57, "h": 0.9, "d": 0.6, "interaction": "door"}, {"name": "Cajones fregadero", "type": "base", "x": 1.77, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "drawer"}, {"name": "Cajones", "type": "base", "x": 2.37, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "drawer"}, {"name": "Cajones", "type": "base", "x": 2.97, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "drawer"}, {"name": "Inducci\u00f3n/Horno", "type": "appl", "x": 3.57, "y": 0.0, "z": 0.1, "w": 0.6, "h": 0.9, "d": 0.6, "interaction": "oven_door"}, {"name": "Despensa", "type": "base", "x": 4.17, "y": 0.0, "z": 0.1, "w": 0.57, "h": 0.9, "d": 0.6, "interaction": "door"}, {"name": "Frigor\u00edfico", "type": "appl", "x": 4.74, "y": 0.0, "z": 0.1, "w": 0.6, "h": 2.2, "d": 0.6, "interaction": "door"}, {"name": "Escobero", "type": "base", "x": 5.34, "y": 0.0, "z": 0.1, "w": 0.6, "h": 2.2, "d": 0.6, "interaction": "door"}, {"name": "Balda escobero 1", "type": "furn", "x": 5.35, "y": 1.5, "z": 0.11, "w": 0.58, "h": 0.015, "d": 0.58}, {"name": "Balda escobero 2", "type": "furn", "x": 5.35, "y": 1.8, "z": 0.11, "w": 0.58, "h": 0.015, "d": 0.58}, {"name": "Panel Frigo Oeste", "type": "furn", "x": 4.74, "y": 0.0, "z": 0.1, "w": 0.015, "h": 2.2, "d": 0.6}, {"name": "Panel Frigo Este", "type": "furn", "x": 5.325, "y": 0.0, "z": 0.1, "w": 0.015, "h": 2.2, "d": 0.6}, {"name": "Panel Escobero Oeste", "type": "furn", "x": 5.34, "y": 0.0, "z": 0.1, "w": 0.015, "h": 2.2, "d": 0.6}, {"name": "Panel Escobero Este", "type": "furn", "x": 5.925, "y": 0.0, "z": 0.1, "w": 0.015, "h": 2.2, "d": 0.6}, {"name": "Panel Agave Frigo", "type": "furn", "x": 4.725, "y": 0.9, "z": 0.1, "w": 0.015, "h": 1.3, "d": 0.6}, {"name": "Suelo Frigo", "type": "furn", "x": 4.755, "y": 0.0, "z": 0.115, "w": 0.57, "h": 0.015, "d": 0.57}, {"name": "Suelo Escobero", "type": "furn", "x": 5.355, "y": 0.0, "z": 0.115, "w": 0.57, "h": 0.015, "d": 0.57}, {"name": "Techo Frigo", "type": "furn", "x": 4.755, "y": 2.185, "z": 0.115, "w": 0.57, "h": 0.015, "d": 0.57}, {"name": "Techo Escobero", "type": "furn", "x": 5.355, "y": 2.185, "z": 0.115, "w": 0.57, "h": 0.015, "d": 0.57}, {"name": "Encimera izq", "type": "counter", "x": 0.0, "y": 0.9, "z": 0.0, "w": 1.82, "h": 0.03, "d": 0.7}, {"name": "Encimera izq", "type": "counter", "x": 2.32, "y": 0.9, "z": 0.0, "w": 0.72, "h": 0.03, "d": 0.7}, {"name": "Encimera izq", "type": "counter", "x": 1.82, "y": 0.9, "z": 0.0, "w": 0.5, "h": 0.03, "d": 0.15}, {"name": "Encimera izq", "type": "counter", "x": 1.82, "y": 0.9, "z": 0.55, "w": 0.5, "h": 0.03, "d": 0.15}, {"name": "Encimera der", "type": "counter", "x": 3.04, "y": 0.9, "z": 0.1, "w": 1.685, "h": 0.03, "d": 0.6}, {"name": "Copete izq", "type": "counter", "x": 0.0, "y": 0.93, "z": 0.0, "w": 3.04, "h": 0.04, "d": 0.012}, {"name": "Copete der", "type": "counter", "x": 3.04, "y": 0.93, "z": 0.1, "w": 1.685, "h": 0.04, "d": 0.012}, {"name": "Copete retranqueo", "type": "counter", "x": 3.028, "y": 0.93, "z": 0.0, "w": 0.012, "h": 0.04, "d": 0.1}, {"name": "Vajilla izq", "type": "upper", "x": 3.03, "y": 1.4, "z": 0.1, "w": 0.54, "h": 0.8, "d": 0.35, "interaction": "door"}, {"name": "Campana/Especias", "type": "upper", "x": 3.57, "y": 1.4, "z": 0.1, "w": 0.6, "h": 0.8, "d": 0.35, "interaction": "double_door"}, {"name": "Vajilla der", "type": "upper", "x": 4.17, "y": 1.4, "z": 0.1, "w": 0.56, "h": 0.8, "d": 0.35, "interaction": "door"}, {"name": "Panel Vajilla izq izq", "type": "furn", "x": 3.03, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Panel Vajilla izq der", "type": "furn", "x": 3.555, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Suelo Vajilla izq", "type": "furn", "x": 3.045, "y": 1.4, "z": 0.1, "w": 0.51, "h": 0.015, "d": 0.35}, {"name": "Techo Vajilla izq", "type": "furn", "x": 3.045, "y": 2.185, "z": 0.1, "w": 0.51, "h": 0.015, "d": 0.35}, {"name": "Balda Vajilla izq 1", "type": "furn", "x": 3.045, "y": 1.6642, "z": 0.1, "w": 0.51, "h": 0.015, "d": 0.335}, {"name": "Balda Vajilla izq 2", "type": "furn", "x": 3.045, "y": 1.9208, "z": 0.1, "w": 0.51, "h": 0.015, "d": 0.335}, {"name": "Panel Campana izq", "type": "furn", "x": 3.57, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Panel Campana der", "type": "furn", "x": 4.155, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Techo Campana", "type": "furn", "x": 3.585, "y": 2.185, "z": 0.1, "w": 0.57, "h": 0.015, "d": 0.35}, {"name": "Balda Campana 1", "type": "furn", "x": 3.585, "y": 1.6642, "z": 0.1, "w": 0.57, "h": 0.015, "d": 0.335}, {"name": "Balda Campana 2", "type": "furn", "x": 3.585, "y": 1.9208, "z": 0.1, "w": 0.57, "h": 0.015, "d": 0.335}, {"name": "Panel Vajilla der izq", "type": "furn", "x": 4.17, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Panel Vajilla der der", "type": "furn", "x": 4.715, "y": 1.4, "z": 0.1, "w": 0.015, "h": 0.8, "d": 0.35}, {"name": "Suelo Vajilla der", "type": "furn", "x": 4.185, "y": 1.4, "z": 0.1, "w": 0.53, "h": 0.015, "d": 0.35}, {"name": "Techo Vajilla der", "type": "furn", "x": 4.185, "y": 2.185, "z": 0.1, "w": 0.53, "h": 0.015, "d": 0.35}, {"name": "Balda Vajilla der 1", "type": "furn", "x": 4.185, "y": 1.6642, "z": 0.1, "w": 0.53, "h": 0.015, "d": 0.335}, {"name": "Balda Vajilla der 2", "type": "furn", "x": 4.185, "y": 1.9208, "z": 0.1, "w": 0.53, "h": 0.015, "d": 0.335}, {"name": "Campana cuerpo", "type": "appl", "x": 3.67, "y": 1.4, "z": 0.15, "w": 0.4, "h": 0.8, "d": 0.25}, {"name": "Balda especias 0", "type": "furn", "x": 2.96, "y": 1.4, "z": 0.0, "w": 0.07, "h": 0.015, "d": 0.43}, {"name": "Balda especias 1", "type": "furn", "x": 2.96, "y": 1.572, "z": 0.0, "w": 0.07, "h": 0.015, "d": 0.43}, {"name": "Balda especias 2", "type": "furn", "x": 2.96, "y": 1.729, "z": 0.0, "w": 0.07, "h": 0.015, "d": 0.43}, {"name": "Balda especias 3", "type": "furn", "x": 2.96, "y": 1.886, "z": 0.0, "w": 0.07, "h": 0.015, "d": 0.43}, {"name": "Balda especias 4", "type": "furn", "x": 2.96, "y": 2.043, "z": 0.0, "w": 0.07, "h": 0.015, "d": 0.43}, {"name": "Placa inducci\u00f3n", "type": "appl", "x": 3.57, "y": 0.93, "z": 0.145, "w": 0.6, "h": 0.01, "d": 0.51}, {"name": "Olla", "type": "appl", "x": 3.82, "y": 0.945, "z": 0.25, "w": 0.3, "h": 0.15, "d": 0.3}, {"name": "Ventana grande", "type": "window", "x": 0.13, "y": 0.96, "z": 0.0, "w": 1.75, "h": 0.915, "d": 0.0}, {"name": "Ventana peque\u00f1a", "type": "window", "x": 2.18, "y": 0.96, "z": 0.0, "w": 0.65, "h": 0.915, "d": 0.0}, {"name": "Persiana grande", "type": "wall", "x": 0.13, "y": 1.875, "z": 0.0, "w": 1.75, "h": 0.185, "d": 0.085}, {"name": "Persiana peque\u00f1a", "type": "wall", "x": 2.18, "y": 1.875, "z": 0.0, "w": 0.65, "h": 0.185, "d": 0.085}, {"name": "Fregadero", "type": "sink", "x": 1.81, "y": 0.72, "z": 0.14, "w": 0.52, "h": 0.18, "d": 0.42}, {"name": "Grifo", "type": "appl", "x": 2.05, "y": 0.93, "z": 0.06, "w": 0.04, "h": 0.2, "d": 0.04}, {"name": "Marco puerta izq", "type": "door", "x": 4.94, "y": 0.0, "z": 2.6, "w": 0.05, "h": 2.03, "d": 0.05}, {"name": "Marco puerta der", "type": "door", "x": 5.71, "y": 0.0, "z": 2.6, "w": 0.05, "h": 2.03, "d": 0.05}, {"name": "Marco puerta sup", "type": "door", "x": 4.99, "y": 1.98, "z": 2.6, "w": 0.72, "h": 0.05, "d": 0.05}, {"name": "Puerta", "type": "door", "x": 4.995, "y": 0.005, "z": 2.61, "w": 0.71, "h": 1.97, "d": 0.04}, {"name": "Columna azulejo", "type": "tile", "x": 1.74, "y": 0.0, "z": 2.2, "w": 0.98, "h": 2.33, "d": 0.45}, {"name": "Estante bajo Micro", "type": "column", "x": 1.14, "y": 0.0, "z": 2.2, "w": 0.6, "h": 1.025, "d": 0.45, "interaction": "door"}, {"name": "Estante bajo Micro mid", "type": "upper", "x": 1.155, "y": 0.5125, "z": 2.215, "w": 0.57, "h": 0.02, "d": 0.42}, {"name": "Estante bajo Micro sup", "type": "upper", "x": 1.155, "y": 1.01, "z": 2.215, "w": 0.57, "h": 0.015, "d": 0.42}, {"name": "Microondas", "type": "appl", "x": 1.14, "y": 1.025, "z": 2.2, "w": 0.6, "h": 0.28, "d": 0.45, "interaction": "door"}, {"name": "Estante sobre Micro inf", "type": "upper", "x": 1.155, "y": 1.305, "z": 2.215, "w": 0.57, "h": 0.015, "d": 0.42}, {"name": "Estante sobre Micro", "type": "column", "x": 1.14, "y": 1.305, "z": 2.2, "w": 0.6, "h": 1.025, "d": 0.45, "interaction": "door"}, {"name": "Estante sobre Micro mid", "type": "upper", "x": 1.155, "y": 1.8175, "z": 2.215, "w": 0.57, "h": 0.02, "d": 0.42}, {"name": "Despensa Sur", "type": "column", "x": 0.57, "y": 0.0, "z": 2.2, "w": 0.57, "h": 2.33, "d": 0.45, "interaction": "door"}, {"name": "Caldera", "type": "column", "x": 0.0, "y": 0.0, "z": 2.2, "w": 0.57, "h": 2.33, "d": 0.45, "interaction": "door"}, {"name": "Estante Despensa Sur 1", "type": "upper", "x": 0.585, "y": 0.466, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.41}, {"name": "Estante Despensa Sur 2", "type": "upper", "x": 0.585, "y": 0.932, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.41}, {"name": "Estante Despensa Sur 3", "type": "upper", "x": 0.585, "y": 1.398, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.41}, {"name": "Estante Despensa Sur 4", "type": "upper", "x": 0.585, "y": 1.864, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.41}, {"name": "Caldera Ariston", "type": "appl", "x": 0.085, "y": 1.25, "z": 2.2325, "w": 0.4, "h": 0.745, "d": 0.385}, {"name": "Estante Caldera 80", "type": "upper", "x": 0.015, "y": 0.8, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.42}, {"name": "Estante Caldera 40", "type": "upper", "x": 0.015, "y": 0.4, "z": 2.215, "w": 0.54, "h": 0.02, "d": 0.42}, {"name": "Estante base Sur", "type": "upper", "x": 0.015, "y": 0.0, "z": 2.215, "w": 1.71, "h": 0.03, "d": 0.42}, {"name": "Tablero superior Sur", "type": "column", "x": 0.0, "y": 2.315, "z": 2.2, "w": 1.74, "h": 0.015, "d": 0.45}, {"name": "Pared Caldera izq", "type": "column", "x": 0.0, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Pared Caldera der", "type": "column", "x": 0.555, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Pared Despensa S izq", "type": "column", "x": 0.57, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Pared Despensa S der", "type": "column", "x": 1.125, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Pared Micro izq", "type": "column", "x": 1.14, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Pared Micro der", "type": "column", "x": 1.725, "y": 0.0, "z": 2.2, "w": 0.015, "h": 2.33, "d": 0.45}, {"name": "Mesa comedor", "type": "furn", "x": 2.82, "y": 0.0, "z": 1.4, "w": 1.4, "h": 0.75, "d": 0.8}, {"name": "Silla 1", "type": "furn", "x": 2.9867, "y": 0.0, "z": 1.85, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Silla 2", "type": "furn", "x": 3.6033, "y": 0.0, "z": 1.85, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Silla 3", "type": "furn", "x": 2.9867, "y": 0.0, "z": 1.3, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Silla 4", "type": "furn", "x": 3.6033, "y": 0.0, "z": 1.3, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Silla 5", "type": "furn", "x": 2.72, "y": 0.0, "z": 1.575, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Silla 6", "type": "furn", "x": 3.87, "y": 0.0, "z": 1.575, "w": 0.45, "h": 0.45, "d": 0.45}, {"name": "Vuelo", "type": "upper", "x": 0.0, "y": 2.2, "z": 0.0, "w": 5.94, "h": 0.03, "d": 0.7}, {"name": "Nicho de techo Norte", "type": "ceiling", "x": 0.0, "y": 2.23, "z": 0.335, "w": 5.94, "h": 0.1, "d": 0.03}, {"name": "LED Norte", "type": "light", "x": 0.0, "y": 2.23, "z": 0.365, "w": 5.94, "h": 0.02, "d": 0.02}, {"name": "LED bajo muebles", "type": "light", "x": 3.04, "y": 1.4, "z": 0.1, "w": 2.3, "h": 0.02, "d": 0.02}, {"name": "Foco 1", "type": "light", "x": 0.274, "y": 2.195, "z": 0.32, "w": 0.06, "h": 0.005, "d": 0.06}, {"name": "Foco 2", "type": "light", "x": 0.882, "y": 2.195, "z": 0.32, "w": 0.06, "h": 0.005, "d": 0.06}, {"name": "Foco 3", "type": "light", "x": 1.49, "y": 2.195, "z": 0.32, "w": 0.06, "h": 0.005, "d": 0.06}, {"name": "Foco 4", "type": "light", "x": 2.098, "y": 2.195, "z": 0.32, "w": 0.06, "h": 0.005, "d": 0.06}, {"name": "Foco 5", "type": "light", "x": 2.706, "y": 2.195, "z": 0.32, "w": 0.06, "h": 0.005, "d": 0.06}, {"name": "Enchufe ventanas", "type": "electrical", "x": 0.02, "y": 1.22, "z": -0.005, "w": 0.08, "h": 0.16, "d": 0.01}, {"name": "Enchufe retranqueo", "type": "electrical", "x": 3.015, "y": 1.22, "z": 0.01, "w": 0.01, "h": 0.16, "d": 0.08}, {"name": "Enchufe Despensa", "type": "electrical", "x": 4.37, "y": 1.3, "z": 0.105, "w": 0.16, "h": 0.08, "d": 0.01}, {"name": "Enchufe plancha", "type": "electrical", "x": 0.46, "y": 0.82, "z": 2.645, "w": 0.08, "h": 0.08, "d": 0.01}, {"name": "Enchufe caldera", "type": "electrical", "x": 0.46, "y": 2.0, "z": 2.645, "w": 0.08, "h": 0.08, "d": 0.01}, {"name": "Interruptor puerta", "type": "electrical", "x": 4.754, "y": 1.02, "z": 2.647, "w": 0.086, "h": 0.086, "d": 0.003}, {"name": "Luces de trabajo", "type": "electrical", "x": 3.107, "y": 1.18, "z": 0.1, "w": 0.086, "h": 0.086, "d": 0.005}, {"name": "Enchufe comedor", "type": "electrical", "x": 2.8, "y": 0.3, "z": 2.645, "w": 0.16, "h": 0.08, "d": 0.01}, {"name": "L\u00e1mpara comedor", "type": "lamp", "x": 3.32, "y": 1.3, "z": 1.6, "w": 0.4, "h": 0.25, "d": 0.4}, {"name": "Cable l\u00e1mpara", "type": "electrical", "x": 3.515, "y": 1.55, "z": 1.795, "w": 0.01, "h": 0.78, "d": 0.01}];
 const CAM_POS = [3.50, 1.60, 2.00];
 const CAM_TARGET = [4.50, 1.20, 0.30];
-document.getElementById("build").textContent = "#1494a187";
+document.getElementById("build").textContent = "#7165f0d9";
 // ============================================================
 // Cocina 3D — PBR Viewer with textures & window lighting
 // Injected before this: const TEX_DATA, ELEMENTS, CAM_POS, CAM_TARGET
@@ -2108,7 +2108,12 @@ renderer.domElement.addEventListener('pointerup', (ev) => {
 
     // Interactive panels (doors, drawers, campana)
     const panel = interactives.find(p => p.mesh === obj);
-    if (panel) { panel.target = panel.target < 0.5 ? 1 : 0; return; }
+    if (panel) {
+      panel.startState = panel.state;
+      panel.startTime = performance.now();
+      panel.target = panel.target < 0.5 ? 1 : 0;
+      return;
+    }
 
 
     // Click on ceiling → toggle ceiling LEDs
@@ -2201,49 +2206,62 @@ window.addEventListener('resize', () => {
   renderer.setSize(innerWidth, innerHeight);
 });
 
-// ---- Animate (requestAnimationFrame — wireframe during movement handles perf) ----
-let _camSaveCount = 0;
+// ---- Animate (adaptive FPS — never exceed ~80% device capacity) ----
+const ANIM_DURATION = 3000; // ms — time for any animation to complete (0→1 or 1→0)
+let _frameInterval = 1000 / 30; // start at 30 FPS, adapts if device is slower
+let _lastFrameTime = 0;
+let _lastCamSaveTime = 0;
 // Reusable vectors for WASD (avoid per-frame allocation)
 const _fwd = new THREE.Vector3();
 const _right = new THREE.Vector3();
 const _delta = new THREE.Vector3();
+// WASD speed: metres per second (scaled by real elapsed time)
+const WASD_SPEED = 2.4;
 
-(function animate() {
+(function animate(now) {
   requestAnimationFrame(animate);
 
-  // WASD camera movement (move camera + target together)
-  const MOVE_SPEED = 0.04;
+  // Frameskip: only render when enough time has elapsed
+  const elapsed = now - _lastFrameTime;
+  if (elapsed < _frameInterval) return;
+  _lastFrameTime = now;
+
+  // WASD camera movement (scaled by real elapsed seconds, capped at 100ms)
+  const dtSec = Math.min(elapsed, 100) / 1000;
   if (keysDown['KeyW'] || keysDown['KeyS'] || keysDown['KeyA'] || keysDown['KeyD'] ||
       keysDown['KeyQ'] || keysDown['KeyE']) {
     camera.getWorldDirection(_fwd);
     _fwd.y = 0; _fwd.normalize();
     _right.crossVectors(_fwd, camera.up).normalize();
     _delta.set(0, 0, 0);
-    if (keysDown['KeyW']) _delta.addScaledVector(_fwd, MOVE_SPEED);
-    if (keysDown['KeyS']) _delta.addScaledVector(_fwd, -MOVE_SPEED);
-    if (keysDown['KeyA']) _delta.addScaledVector(_right, -MOVE_SPEED);
-    if (keysDown['KeyD']) _delta.addScaledVector(_right, MOVE_SPEED);
-    if (keysDown['KeyE']) _delta.y += MOVE_SPEED;
-    if (keysDown['KeyQ']) _delta.y -= MOVE_SPEED;
+    if (keysDown['KeyW']) _delta.addScaledVector(_fwd, 1);
+    if (keysDown['KeyS']) _delta.addScaledVector(_fwd, -1);
+    if (keysDown['KeyA']) _delta.addScaledVector(_right, -1);
+    if (keysDown['KeyD']) _delta.addScaledVector(_right, 1);
+    if (keysDown['KeyE']) _delta.y += 1;
+    if (keysDown['KeyQ']) _delta.y -= 1;
+    _delta.normalize().multiplyScalar(WASD_SPEED * dtSec);
     camera.position.add(_delta);
     controls.target.add(_delta);
   }
 
   controls.update();
 
-  // Save camera to localStorage every ~2s (every 120th frame at 60fps)
-  if (++_camSaveCount >= 120) {
-    _camSaveCount = 0;
+  // Save camera to localStorage every ~2s
+  if (now - _lastCamSaveTime >= 2000) {
+    _lastCamSaveTime = now;
     const p = camera.position, t = controls.target;
     try { localStorage.setItem('cocina_cam', JSON.stringify({
       pos: [p.x, p.y, p.z], tgt: [t.x, t.y, t.z]
     })); } catch {}
   }
 
-  // Animate interactive panels (faster animation speed)
+  // Animate interactive panels — linear over ANIM_DURATION using real timestamps
   interactives.forEach(p => {
-    p.state += (p.target - p.state) * 0.12;  // increased from 0.06 for faster animation
-    if (Math.abs(p.state - p.target) < 0.001) p.state = p.target;
+    if (p.state === p.target) return;
+    const t = Math.min((now - p.startTime) / ANIM_DURATION, 1);
+    p.state = p.startState + (p.target - p.startState) * t;
+    if (t >= 1) p.state = p.target;
     if (p.type === 'door') {
       p.pivot.rotation.y = p.openAngle * p.state;
     } else if (p.type === 'oven_door') {
@@ -2256,6 +2274,7 @@ const _delta = new THREE.Vector3();
       p.group.position.z = p.slideMax * p.state;
     }
   });
+
   // Wall-side visibility: hide near-wall objects when camera is behind that wall
   // During wireframe movement, show everything for spatial orientation
   if (_isMoving) {
@@ -2274,6 +2293,14 @@ const _delta = new THREE.Vector3();
   }
 
   renderer.render(scene, camera);
+
+  // Adaptive FPS: back off if rendering exceeds budget; recover gradually toward 30 FPS
+  const renderTime = performance.now() - now;
+  if (renderTime > _frameInterval) {
+    _frameInterval = renderTime * 1.20; // render uses ~83% of frame budget
+  } else if (_frameInterval > 1000 / 30) {
+    _frameInterval *= 0.95; // recover toward 30 FPS target
+  }
 })();
 
 </script></body></html>
