@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cocina 3D — PR #19</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; padding: 1em; }
+    h1 { color: #333; }
+    h2 { color: #555; margin-top: 1.5em; }
+    a { color: #0066cc; }
+    ul { line-height: 2; }
+    .pr-info { background: #f0f4f8; border-left: 4px solid #0066cc; padding: 1em 1.5em; border-radius: 4px; margin-bottom: 1.5em; }
+    .pr-info h2 { margin-top: 0; color: #0066cc; }
+    .pr-body { color: #555; line-height: 1.6; }
+    .branch { font-family: monospace; background: #e8e8e8; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Cocina 3D — Vista previa</h1>
+  <div class="pr-info">
+    <h2><a href="https://github.com/gatopeich/Cocina/pull/19">PR #19: Raise microwave to 100cm base, add 38cm open shelf above</a></h2>
+    <p>Branch: <span class="branch">copilot/raise-microwave-100cm</span></p>
+    <div class="pr-body">Restructure the Pared Sur microwave column: place microwave at y=100 on a fixed base (was vertically centered at y=102.5), add a 38cm doorless open shelf above it, and reduce the upper door module.<br>
+<br>
+### Changes<br>
+<br>
+- **`memoria_descriptiva.md`** — Updated microwave position, added Repisa Micro spec, adjusted Estante sobre Micro range<br>
+- **`cocina_3d.ipynb`** — `MICRO_Y=100.0` (was centered formula), `MICRO_H=38.0` (was 28, now matches Balay 3CP5002B3 spec of 38.2cm), new `Repisa Micro` column element with no interaction<br>
+- **`viewer.js`** — Excluded `Estante repisa` from door-recess logic since the open shelf has no door panel<br>
+- **`alzado_sur.svg`** — Regenerated<br>
+<br>
+### Layout<br>
+<br>
+| Section | Before | After |<br>
+|---|---|---|<br>
+| Estante bajo Micro (door) | 0 → 102.5 | 0 → 100 |<br>
+| Microondas Balay (38cm) | 102.5 → 130.5 | **100 → 138** |<br>
+| Repisa Micro (open) | — | **138 → 176** |<br>
+| Estante sobre Micro (door) | 130.5 → 233 | 176 → 233 |<br>
+<br>
+### Alzado Pared Sur<br>
+<br>
+![Alzado Pared Sur](https://github.com/user-attachments/assets/3a5da62a-da20-4d83-ab95-4668e5139102)<br>
+<br>
+&lt;!-- START COPILOT CODING AGENT TIPS --&gt;<br>
+---<br>
+<br>
+💡 You can make Copilot smarter by setting up custom instructions, customizing its development environment and configuring Model Context Protocol (MCP) servers. Learn more [Copilot coding agent tips](https://gh.io/copilot-coding-agent-tips) in the docs.<br></div>
+  </div>
+  <h2>Archivos generados</h2>
+  <ul>
+    <li><a href="cocina.html">cocina.html</a> — Visor 3D interactivo</li>
+    <li><a href="cocina.obj">cocina.obj</a> — Modelo OBJ</li>
+    <li><a href="cocina.mtl">cocina.mtl</a> — Materiales MTL</li>
+  </ul>
+</body>
+</html>
